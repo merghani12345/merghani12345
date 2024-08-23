@@ -34,7 +34,7 @@ class Uinformemployeline(models.Model):
             else:
                 line.product_code = line.type_items_id.name.name
 
-
+#----------------------------------------
     @api.model
     def create(self, vals):
         get_property = self.env['uinform.employee'].search([('id', '=', vals['uinform_id'])])
