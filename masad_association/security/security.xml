@@ -1,0 +1,77 @@
+<odoo>
+
+    <record id="masad_assocition" model="ir.module.category">
+        <field name="name">assoction</field>
+        <field name="description">assoction</field>
+    </record>
+
+    <record id="group_admin_assoction" model="res.groups">
+        <field name="name">group admin</field>
+        <field name="category_id" ref="masad_assocition"/>
+    </record>
+
+
+    <record id="group_user_assoction" model="res.groups">
+        <field name="name">group user</field>
+        <field name="category_id" ref="masad_assocition"/>
+    </record>
+
+    <record id="group_members_assoction" model="res.groups">
+        <field name="name">group members</field>
+        <field name="category_id" ref="masad_assocition"/>
+    </record>
+
+    <record id="group_confirm_assoction" model="res.groups">
+        <field name="name">group confirm</field>
+        <field name="category_id" ref="masad_assocition"/>
+    </record>
+
+
+    <record id="menu_page_member" model="res.groups">
+        <field name="name">menu page member</field>
+        <field name="category_id" ref="masad_assocition"/>
+
+    </record>
+
+    <record id="menu_support" model="res.groups">
+        <field name="name">menu support</field>
+        <field name="category_id" ref="masad_assocition"/>
+    </record>
+
+    <record id="group_meeting" model="res.groups">
+        <field name="name">group meeting</field>
+        <field name="category_id" ref="masad_assocition"/>
+    </record>
+
+
+    <record id="group_filter" model="res.groups">
+        <field name="name">group filter</field>
+        <field name="category_id" ref="masad_assocition"/>
+    </record>
+
+
+    <record id="members_line_rule" model="ir.rule">
+        <field name="name">members rule</field>
+        <field name="model_id" ref="model_members_line"/>
+        <field name="domain_force">['|',('user_id','=',user.id),('user_id','=',False)]</field>
+        <field name="groups" eval="[(4, ref('masad_association.group_members_assoction'))]"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="True"/>
+        <field name="perm_create" eval="False"/>
+        <field name="perm_unlink" eval="False"/>
+    </record>
+
+
+    <record id="group_manger_vote" model="ir.rule">
+        <field name="name">group manger vote</field>
+        <field name="model_id" ref="model_members_line"/>
+        <field name="domain_force">[(1,'=',1)]</field>
+        <field name="groups" eval="[(4, ref('masad_association.group_admin_assoction'))]"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="True"/>
+        <field name="perm_create" eval="True"/>
+        <field name="perm_unlink" eval="True"/>
+    </record>
+
+
+</odoo>

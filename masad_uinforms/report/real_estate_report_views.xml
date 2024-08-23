@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="action_report_estate_property_unifroms" model="ir.actions.report">
+            <field name="name">Report Uniforms</field>
+            <field name="model">uinform.employee</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">masad_uinforms.uinform_employee_line</field>
+            <field name="report_file">real_estate_2.uinform_employee_line</field>
+            <field name="print_report_name">'Report for Estate Property - %s' % (object.name)</field>
+            <field name="binding_model_id" ref="model_uinform_employee"/>
+            <field name="binding_type">report</field>
+        </record>
+
+
+        <record id="action_report_uniform_attachment_unifroms" model="ir.actions.report">
+            <field name="name">محضر الاجتماع</field>
+            <field name="model">uniform.attachment</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">masad_uinforms.uniform_attachment</field>
+            <field name="report_file">masad_uinforms.uniform_attachment</field>
+            <field name="print_report_name">'Report for Estate Property - %s' % (object.name)</field>
+            <field name="binding_model_id" ref="model_uniform_attachment"/>
+            <field name="binding_type">report</field>
+        </record>
+    </data>
+</odoo>

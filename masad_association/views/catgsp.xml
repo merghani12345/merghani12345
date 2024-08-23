@@ -1,0 +1,28 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="sp_tree_view_line">
+            <field name="name">sp.tree.view.line</field>
+            <field name="model">sp.line</field>
+            <field name="arch" type="xml">
+                <tree editable="bottom">
+                    <field name="name"/>
+
+                </tree>
+            </field>
+
+        </record>
+         <!--action-->
+        <record model="ir.actions.act_window" id="sp_action_line">
+            <field name="name">انواع الدعم</field>
+            <field name="res_model">sp.line</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="sp_tree_view_line"/>
+        </record>
+
+
+        <menuitem name="الدعم" id="sp_menu" parent="masad_association.menu_0"/>
+        <menuitem name="انواع الدعم" id="sp_menu1" parent="sp_menu"
+                  action="sp_action_line"/>
+
+    </data>
+</odoo>

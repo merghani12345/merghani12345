@@ -1,0 +1,10 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_masad_association_admin,masad.association,model_masad_association,group_admin_assoction,1,1,1,1
+access_masad_association_adminline,members.line,model_members_line,group_admin_assoction,1,1,1,1
+access_masad_association_spline,sp.line,model_sp_line,group_admin_assoction,1,1,1,1
+access_masad_association_user,masad.association,model_masad_association,group_user_assoction,1,1,1,0
+access_masad_association_write,masad.association,model_masad_association,group_members_assoction,1,1,0,0
+access_masad_association_line,members.line,model_members_line,group_members_assoction,1,0,1,0
+access_masad_association_confirm,masad.association,model_masad_association,group_confirm_assoction,1,1,0,0
+access_masad_association_confirmline,members.line,model_members_line,group_confirm_assoction,1,0,0,0
+

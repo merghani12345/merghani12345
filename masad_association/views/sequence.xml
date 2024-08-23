@@ -1,0 +1,11 @@
+<odoo>
+    <data>
+        <record id="masad_association" model="ir.sequence">
+            <field name="name">masad association</field>
+            <field name="code">masad.association</field>
+             <field name="prefix">MSD%(year)s</field>
+            <field name="padding">8</field>
+            <field name="company_id" eval="False"/>
+        </record>
+    </data>
+</odoo>

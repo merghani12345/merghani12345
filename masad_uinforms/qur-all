@@ -1,0 +1,25 @@
+update uinform_employee_line line1 set size_id=line2.size_id
+from uinform_employee_line_technical line2
+where line1.employee_line_id=line2.employee_line_id and
+line1.name=line2.name AND
+line1.categ_id=line2.categ_id AND
+line1.type_items_id=line2.type_items_id and
+line1.color_id=line2.color_id AND
+line1.date=line2.date 
+
+
+
+
+                <field name="name"  optional="hide" />
+                <field name="employee_line_id" />
+                <field name="gender"  optional="hide" />
+                <field name="categ_id"/>
+                <field name="date"  optional="hide" />
+                <field name="type_items_id"/>
+
+                <field name="product_code"  optional="hide"/>
+                <field name="color_id"/>
+                <field name="color_items_id"/>
+                <field name="size_id"/>
+                <field name="size_items_id"/>
+                <field name="qty" />

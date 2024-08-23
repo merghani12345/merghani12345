@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+                <meta charset="utf-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+                <title>Odoo - New</title>
+                <link type="image/x-icon" rel="shortcut icon" href="http://localhost:8069/web/image/res.company/1/favicon">
+                <script id="web.layout.odooscript" type="text/javascript">
+                    var odoo = {
+                        csrf_token: "dfc8dab41e5f607646ad44a9968db94a5a9e79e3o1704892597",
+                        debug: "1",
+                    };
+                </script>
+                <script type="text/javascript">
+                    odoo.__session_info__ = {"uid": 2, "is_system": true, "is_admin": true, "user_context": {"lang": "en_US", "tz": "Africa/Khartoum", "uid": 2}, "db": "masad_DB", "server_version": "15.0", "server_version_info": [15, 0, 0, "final", 0, ""], "support_url": "https://www.odoo.com/buy", "name": "manger", "username": "manger", "partner_display_name": "manger", "company_id": 1, "partner_id": 3, "web.base.url": "http://localhost:8069", "active_ids_limit": 20000, "profile_session": null, "profile_collectors": null, "profile_params": null, "max_file_upload_size": 134217728, "home_action_id": false, "cache_hashes": {"translations": "3e3e3662962d53a0d7dce4b78680b64cceb942a3", "load_menus": "1aecb56583db62534f2987786707c09dda768f22c33ec760019e29f7befb8640", "qweb": "50df3be8abfc3621619424e2c122f78d516f9213620cc92ec131c5e7129a1c3c", "assets_discuss_public": "29a62c73717faee398f27a17dbd20448310709c0b308ac19d52ee2001cc7ab9a"}, "currencies": {"139": {"symbol": "\u062c.\u0633.", "position": "after", "digits": [69, 2]}, "2": {"symbol": "$", "position": "before", "digits": [69, 2]}}, "user_companies": {"current_company": 1, "allowed_companies": {"1": {"id": 1, "name": "My Company", "sequence": 0}}}, "show_effect": "True", "display_switch_company_menu": false, "user_id": [2], "max_time_between_keys_in_ms": 100, "web_tours": [], "tour_disable": false, "notification_type": "email", "odoobot_initialized": true, "iap_company_enrich": false};
+                    odoo.reloadMenus = () => fetch(`/web/webclient/load_menus/${odoo.__session_info__.cache_hashes.load_menus}`).then(res => res.json());
+                    odoo.loadMenusPromise = odoo.reloadMenus();
+                    odoo.loadTemplatesPromise = fetch(`/web/webclient/qweb/${odoo.__session_info__.cache_hashes.qweb}?bundle=web.assets_qweb`).then(doc => doc.text());
+                    // Block to avoid leaking variables in the script scope
+                    {
+                        const { user_context,  cache_hashes } = odoo.__session_info__;
+                        // Prefetch translations to speedup webclient. This is done in JS because link rel="prefetch"
+                        // is not yet supported on safari.
+                        fetch(`/web/webclient/translations/${cache_hashes.translations}?lang=${user_context.lang}`);
+                    }
+                </script>
+                <link type="text/css" rel="stylesheet" href="Odoo%20-%20New_files/web.assets_common.min.css" data-asset-bundle="web.assets_common" data-asset-version="2e662b5">
+                <link type="text/css" rel="stylesheet" href="Odoo%20-%20New_files/web.assets_backend.min.css" data-asset-bundle="web.assets_backend" data-asset-version="11b0fb6">
+                <script type="text/javascript" src="Odoo%20-%20New_files/web.assets_common.min.js" data-asset-bundle="web.assets_common" data-asset-version="2e662b5"></script>
+                <script type="text/javascript" src="Odoo%20-%20New_files/web.assets_backend.min.js" data-asset-bundle="web.assets_backend" data-asset-version="11b0fb6"></script>
+                <script type="text/javascript" src="Odoo%20-%20New_files/web.assets_backend_prod_only.min.js" data-asset-bundle="web.assets_backend_prod_only" data-asset-version="a7255b5"></script>
+            <script type="text/javascript" src="Odoo%20-%20New_files/en_US"></script></head>
+            <body class="o_web_client" data-odoo-version="new" data-debug-mode="1">
+            
+        <header><nav data-command-category="navbar" class="o_main_navbar"><div class="o-dropdown dropdown o-dropdown--no-caret o_navbar_apps_menu"><button class="dropdown-toggle  " title="Home Menu" data-hotkey="h" aria-expanded="false"><i class="fa fa-th-large"></i></button></div><a href="#menu_id=122&amp;action=338" role="menuitem" tabindex="0" class="dropdown-item o_menu_brand" data-section="79" data-menu-xmlid="mail.menu_root_discuss">نظام الدعم المجتمعي</a><div role="menu" class="o_menu_sections"><a href="#menu_id=123&amp;action=338" role="menuitem" title="سجل الطلبات" data-hotkey="1" tabindex="0" class="dropdown-item o_nav_entry" data-section="123" data-menu-xmlid="masad_association.menu_1">سجل الطلبات</a><a href="#menu_id=241&amp;action=153" role="menuitem" title="طلب دعم" data-hotkey="2" tabindex="0" class="dropdown-item o_nav_entry" data-section="241" data-menu-xmlid="masad_association.menu_user">طلب دعم</a><div class="o-dropdown dropdown o-dropdown--no-caret"><button class="dropdown-toggle  " title="كشف الدعومات" data-hotkey="3" aria-expanded="false" data-menu-xmlid="masad_association.menu_suport"><span data-section="237">كشف الدعومات</span></button></div><div class="o-dropdown dropdown o-dropdown--no-caret"><button class="dropdown-toggle  " title="الاعدادات" data-hotkey="4" aria-expanded="false" data-menu-xmlid="masad_association.menu_0"><span data-section="124">الاعدادات</span></button></div><a href="#menu_id=288&amp;action=111" role="menuitem" title="اجتماع" data-hotkey="5" tabindex="0" class="dropdown-item o_nav_entry" data-section="288" data-menu-xmlid="masad_association.meeting">اجتماع</a></div><div role="menu" class="o_menu_systray"><div class="o-dropdown dropdown o-dropdown--no-caret o_debug_manager"><button class="dropdown-toggle o-dropdown--narrow  " aria-expanded="false"><i class="fa fa-bug"></i></button></div><div class="o_RtcActivityNotice dropdown"><div class="o_RtcInvitations"></div></div><div class="o_MessagingMenu dropdown"><a href="#" title="Conversations" role="button" aria-expanded="false" aria-haspopup="true" class="o_MessagingMenu_toggler dropdown-toggle o-no-caret o-dropdown--narrow"><i role="img" aria-label="Messages" class="o_MessagingMenu_icon fa fa-comments"></i><span class="o_MessagingMenu_counter badge badge-pill">2</span></a></div><div class="o_mail_systray_item dropdown">
+            <a class="dropdown-toggle o-no-caret o-dropdown--narrow" data-toggle="dropdown" data-display="static" aria-expanded="false" title="Activities" href="#" role="button">
+                <i class="fa fa-clock-o" role="img" aria-label="Activities"></i> <span class="o_notification_counter badge badge-pill">1</span>
+            </a>
+            <div class="o_mail_systray_dropdown dropdown-menu dropdown-menu-right" role="menu">
+                <div class="o_mail_systray_dropdown_items">
+        
+        
+        
+            <div class="o_mail_preview o_systray_activity" data-res_model="calendar.event" data-model_name="Today's Meetings" data-filter="my">
+                <div class="o_mail_preview_image o_mail_preview_app">
+                    <img src="Odoo%20-%20New_files/icon_002.png" alt="Activity">
+                </div>
+                <div class="o_preview_info">
+                    <div class="o_preview_title">
+                        <span class="o_preview_name">
+                            Today's Meetings
+                        </span>
+                        
+                    </div>
+            <div>
+                
+                
+                    <div>
+                        <span class="o_meeting_filter o_meeting_bold" data-res_model="calendar.event" data-res_id="4" data-model_name="Today's Meetings" title="system manger on Time Off : 33.00 day(s)">
+                            <span>system manger on Time Off : 33.00 day(s)</span>
+                        </span>
+                        <span class="float-right">
+                            
+                                
+                                08:00:00
+                            
+                        </span>
+                    </div>
+                
+            </div>
+        
+                    
+                </div>
+            </div>
+        
+            <div class="o_mail_preview o_systray_activity" data-res_model="sale.order" data-model_name="Sales Order" data-filter="my">
+                <div class="o_mail_preview_image o_mail_preview_app">
+                    <img src="Odoo%20-%20New_files/icon.png" alt="Activity">
+                </div>
+                <div class="o_preview_info">
+                    <div class="o_preview_title">
+                        <span class="o_preview_name">
+                            Sales Order
+                        </span>
+                        <div class="o_mail_activity_action_buttons">
+                            
+                                <button type="button" title="Summary" class="o_mail_activity_action btn btn-link fa fa-clock-o" data-res_model="sale.order" data-model_name="Sales Order">
+                                </button>
+                            
+                        </div>
+                    </div>
+            
+        
+                    <div>
+                        
+                        <span class="o_no_activity mr16">0 Late </span>
+                        
+                        <span class="o_no_activity mr16">0 Today </span>
+                        <button type="button" class="btn btn-link o_activity_filter_button float-right" data-res_model="sale.order" data-model_name="Sales Order" data-filter="upcoming_all"> 1 Future </button>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            <div class="o_mail_preview o_systray_activity" data-res_model="hr.leave.allocation" data-model_name="Time Off Allocation" data-filter="my">
+                <div class="o_mail_preview_image o_mail_preview_app">
+                    <img src="Odoo%20-%20New_files/icon_003.png" alt="Activity">
+                </div>
+                <div class="o_preview_info">
+                    <div class="o_preview_title">
+                        <span class="o_preview_name">
+                            Time Off Allocation
+                        </span>
+                        <div class="o_mail_activity_action_buttons">
+                            
+                                <button type="button" title="Summary" class="o_mail_activity_action btn btn-link fa fa-clock-o" data-res_model="hr.leave.allocation" data-model_name="Time Off Allocation">
+                                </button>
+                            
+                        </div>
+                    </div>
+            
+        
+                    <div>
+                        
+                        <span class="o_no_activity mr16">0 Late </span>
+                        <button type="button" class="btn btn-link o_activity_filter_button mr16" data-res_model="hr.leave.allocation" data-model_name="Time Off Allocation" data-filter="today"> 1 Today </button>
+                        
+                        
+                        <span class="o_no_activity float-right">0 Future</span>
+                    </div>
+                </div>
+            </div>
+        
+    </div>
+            </div>
+        </div><div class="o-dropdown dropdown o-dropdown--no-caret o_user_menu"><button class="dropdown-toggle  " aria-expanded="false"><img src="Odoo%20-%20New_files/image.svg" alt="User" class="rounded-circle o_user_avatar"> <span class="oe_topbar_name">manger (masad_DB)</span></button></div></div></nav></header><div class="o_action_manager"><div class="o_action o_view_controller"><div data-command-category="actions" class="o_control_panel"><div class="o_cp_top"><div class="o_cp_top_left"><ol role="navigation" class="breadcrumb"><li title="Previous menu" class="breadcrumb-item o_back_button" data-hotkey="b"><a href="#">سجل الطلبات</a></li><li class="breadcrumb-item active"><span class="text-muted">New</span></li></ol></div><div class="o_cp_top_right"><div role="search" class="o_cp_searchview"></div></div></div><div class="o_cp_bottom"><div class="o_cp_bottom_left"><div role="toolbar" aria-label="Control panel buttons" class="o_cp_buttons"><div>
+    <div class="o_form_buttons_view o_hidden" role="toolbar" aria-label="Main actions">
+        <button type="button" class="btn btn-primary o_form_button_edit" title="Edit record" data-hotkey="a">
+            Edit
+        </button>
+        <button type="button" class="btn btn-secondary o_form_button_create" title="Create record" data-hotkey="c">
+            Create
+        </button>
+    </div>
+    <div class="o_form_buttons_edit" role="toolbar" aria-label="Main actions" data-original-title="" title="">
+        <button type="button" class="btn btn-primary o_form_button_save" title="Save record" data-hotkey="s">
+            Save
+        </button>
+        <button type="button" class="btn btn-secondary o_form_button_cancel" title="Discard record" data-hotkey="j">
+            Discard
+        </button>
+    </div>
+</div></div></div><div class="o_cp_bottom_right"><div role="search" class="btn-group o_search_options position-static"></div><div role="search" class="o_cp_pager"></div></div></div></div>
+    <div class="o_content"><div class="o_form_view o_xxl_form_view o_form_editable"><div class="o_form_sheet_bg" data-command-category="app"><div style="background-color:  #ffffff;"><center><img class="img" src="Odoo%20-%20New_files/header.jpg"></center></div><div class="o_form_statusbar"><div class="o_statusbar_buttons"><button type="button" name="button_approve" states="draft" class="btn btn-secondary" data-original-title="" title=""><span>approve</span></button><button type="button" name="button_confirm" states="to approve" class="btn btn-secondary o_invisible_modifier" data-original-title="" title=""><span>confirm</span></button><button type="button" name="button_done" states="confirm" class="btn btn-secondary o_invisible_modifier" data-original-title="" title=""><span>done</span></button><button type="button" name="button_cancel" states="confirm" class="btn btn-secondary o_invisible_modifier" data-original-title="" title=""><span>cancel</span></button><button type="button" name="button_to_draft" class="btn btn-secondary" data-original-title="" title=""><span>draft</span></button></div><div class="o_statusbar_status o_field_widget o_readonly_modifier" name="state" data-original-title="" title="">
+    
+    
+        
+    
+    
+    <button type="button" data-value="cancel" disabled="disabled" title="Not active state" aria-checked="false" role="radio" class="btn o_arrow_button btn-secondary disabled ">
+        الغاء الطلب
+    </button>
+    
+
+    
+        
+    
+    
+    <button type="button" data-value="done" disabled="disabled" title="Not active state" aria-checked="false" role="radio" class="btn o_arrow_button btn-secondary disabled ">
+        اكتمل
+    </button>
+    
+
+    
+        
+    
+    
+    <button type="button" data-value="confirm" disabled="disabled" title="Not active state" aria-checked="false" role="radio" class="btn o_arrow_button btn-secondary disabled ">
+        الموافقة
+    </button>
+    
+
+    
+        
+    
+    
+    <button type="button" data-value="to approve" disabled="disabled" title="Not active state" aria-checked="false" role="radio" class="btn o_arrow_button btn-secondary disabled ">
+        قيد الراجعة
+    </button>
+    
+
+    
+        
+    
+    <button type="button" data-value="draft" disabled="disabled" title="Current state" aria-checked="true" role="radio" class="btn o_arrow_button btn-primary disabled " aria-current="step">
+        مسودة
+    </button>
+    
+    
+
+    
+</div></div><div class="clearfix position-relative o_form_sheet"><div class="clearfix position-relative o_form_sheet"><h1><span class="o_field_char o_field_widget o_quick_editable o_readonly_modifier" name="ref" data-original-title="" title=""></span></h1><select class="o_input o_field_widget o_quick_editable o_required_modifier" name="support" id="o_field_input_119" data-original-title="" title=""><option value="false" style="display: none"></option><option value="&quot;a1&quot;" style="" selected="selected">مدني داخل المنظومه</option><option value="&quot;b2&quot;" style="">عسكري داخل المنظومه</option><option value="&quot;c3&quot;" style="">خارج المنظومه</option><option value="&quot;d4&quot;" style="">المؤسسات</option></select><div class="o_group"><table class="o_group o_inner_group o_group_col_6"><tbody><tr><td colspan="2" style="width: 100%;"><div class="o_horizontal_separator">البيانات الشخصية</div></td></tr><tr><td class="o_td_label"><label class="o_form_label o_required_modifier" for="o_field_input_44" data-original-title="" title="">الاسم</label></td><td style="width: 100%;"><input class="o_field_char o_field_widget o_quick_editable o_input o_required_modifier" name="name" placeholder="ادخل الاسم الرباعي" type="text" autocomplete="off" id="o_field_input_44"></td></tr><tr><td class="o_td_label"><label class="o_form_label o_required_modifier" for="o_field_input_45" data-original-title="" title="">تاريخ تقديم الطلب</label></td><td style="width: 100%;"><div class="o_datepicker o_field_date o_field_widget o_quick_editable o_required_modifier" aria-atomic="true" id="datepicker113" data-target-input="nearest" name="request_date">
+        <input type="text" class="o_datepicker_input o_input datetimepicker-input" name="request_date" data-target="#datepicker113" autocomplete="off" placeholder="" id="o_field_input_45" value="01/10/2023">
+        <span class="o_datepicker_button"></span>
+    </div></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_46" data-original-title="" title="">النوع</label></td><td style="width: 100%;"><select class="o_input o_field_widget o_quick_editable" name="gender" id="o_field_input_46"><option value="false" style="" selected="selected"></option><option value="&quot;gender1&quot;" style="">ذكر</option><option value="&quot;gender2&quot;" style="">انثى</option></select></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_47" data-original-title="" title="">الجهة التابع لها</label></td><td style="width: 100%;"><input class="o_field_char o_field_widget o_quick_editable o_input" name="company" placeholder="" type="text" autocomplete="off" id="o_field_input_47"></td></tr><tr><td class="o_td_label"><label class="o_form_label o_required_modifier" for="o_field_input_48" data-original-title="" title="">بطاقة التعريف</label></td><td style="width: 100%;"><select class="o_input o_field_widget o_quick_editable o_required_modifier" name="id_card" id="o_field_input_48"><option value="false" style="display: none" selected="selected"></option><option value="&quot;id1&quot;" style="">الرقم الوظيفي</option><option value="&quot;id2&quot;" style="">الرقم العسكري</option><option value="&quot;id3&quot;" style="">الرقم الوطني</option><option value="&quot;id4&quot;" style="">الرقم الضريبي</option></select></td></tr><tr><td class="o_td_label"><label class="o_form_label o_invisible_modifier o_required_modifier" for="o_field_input_49" data-original-title="" title="">رقم التعريف</label></td><td style="width: 100%;"><input class="o_field_integer o_field_number o_field_widget o_quick_editable o_input o_invisible_modifier o_required_modifier" name="id_num" placeholder="" type="text" autocomplete="off" id="o_field_input_49" value="0"></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_50" data-original-title="" title="">الوظيفة</label></td><td style="width: 100%;"><input class="o_field_char o_field_widget o_quick_editable o_input" name="job_des" placeholder="" type="text" autocomplete="off" id="o_field_input_50"></td></tr></tbody></table><table class="o_group o_inner_group o_group_col_6"><tbody><tr><td colspan="2" style="width: 100%;"><div class="o_horizontal_separator">بيانات الدعم</div></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_51" data-original-title="" title="">نوع الدعم</label></td><td style="width: 100%;"><select class="o_input o_field_widget o_quick_editable" name="support_tybe" id="o_field_input_51"><option value="false" style="" selected="selected"></option><option value="&quot;s1&quot;" style="">مباشر</option><option value="&quot;s2&quot;" style="">غير مباشر</option></select></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_52" data-original-title="" title="">تصنيف الدعم</label></td><td style="width: 100%;"><div class="o_field_widget o_field_many2one o_quick_editable" aria-atomic="true" name="categ_id">
+        <div class="o_field_many2one_selection">
+            <div class="o_input_dropdown">
+                <input type="text" class="o_input ui-autocomplete-input" autocomplete="off" id="o_field_input_52">
+                <a role="button" class="o_dropdown_button" draggable="false"></a>
+            </div>
+            <button type="button" class="fa fa-external-link btn btn-secondary o_external_button" tabindex="-1" draggable="false" aria-label="External link" title="External link" style="display: none;"></button>
+        </div>
+        <div class="o_field_many2one_extra"></div>
+    </div></td></tr><tr><td class="o_td_label"><label class="o_form_label o_invisible_modifier" for="o_field_input_53" data-original-title="" title="">المبلغ</label></td><td style="width: 100%;"><input class="o_field_integer o_field_number o_field_widget o_quick_editable o_input o_invisible_modifier" name="price" placeholder="" type="text" autocomplete="off" id="o_field_input_53" value="0"></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_54" data-original-title="" title="">تفاصيل الدعم</label></td><td style="width: 100%;"><textarea class="o_field_text o_field_widget o_quick_editable o_input" style="overflow-y: hidden; height: 50px; resize: none;" name="support_details" placeholder="ادخل تفاصيل الدعم" type="text" autocomplete="off" id="o_field_input_54"></textarea><textarea disabled="disabled" style="position: absolute; opacity: 0; height: 10px; border-top-width: 0px; border-bottom-width: 0px; padding: 0px; overflow: hidden; top: -10000px; left: -10000px; width: 353px;"></textarea></td></tr></tbody></table><table class="o_group o_inner_group o_group_col_6"><tbody><tr><td colspan="2" style="width: 100%;"><div class="o_horizontal_separator">المرفقات</div></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_55" data-original-title="" title="">المرفقات</label></td><td style="width: 100%;"><div class="o_field_binary_file o_field_widget" aria-atomic="true" name="Doc">
+        <input type="text" class="o_input o_hidden" readonly="readonly" name="Doc">
+
+        <button type="button" class="btn btn-primary o_select_file_button" title="Select">Upload your file</button>
+        <button type="button" class="btn btn-secondary fa fa-pencil o_select_file_button o_hidden" title="Select" aria-label="Select"></button>
+        <button type="button" class="btn btn-secondary fa fa-trash-o o_clear_file_button o_hidden" title="Clear" aria-label="Clear"></button>
+
+        <span class="o_form_binary_progress o_hidden">Uploading...</span>
+        
+    <div class="o_hidden_input_file o_hidden" style="overflow-x: hidden" aria-atomic="true">
+        <form class="o_form_binary_form" method="post" enctype="multipart/form-data" action="/web/binary/upload">
+            <input type="hidden" name="csrf_token" value="dfc8dab41e5f607646ad44a9968db94a5a9e79e3o1704892597">
+            <input type="hidden" name="callback">
+            <input type="file" class="o_input_file" name="ufile" accept="*">
+            
+            
+            
+        
+        </form>
+        <iframe style="display: none"></iframe>
+    </div>
+
+    </div></td></tr></tbody></table><table class="o_group o_inner_group o_group_col_6"><tbody><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_56" data-original-title="" title="">بيانات اضافية</label></td><td style="width: 100%;"><select class="o_input o_field_widget o_quick_editable" name="test" id="o_field_input_56"><option value="false" style="" selected="selected"></option><option value="&quot;p1&quot;" style="">بيانات شخصية</option></select></td></tr><tr><td class="o_td_label"><label class="o_form_label o_invisible_modifier" for="o_field_input_57" data-original-title="" title="">الراتب الشهري</label></td><td style="width: 100%;"><input class="o_field_char o_field_widget o_quick_editable o_input o_invisible_modifier" name="monthly_salary" placeholder="" type="text" autocomplete="off" id="o_field_input_57"></td></tr><tr><td class="o_td_label"><label class="o_form_label o_invisible_modifier" for="o_field_input_58" data-original-title="" title="">الحالة الاجتماعية</label></td><td style="width: 100%;"><select class="o_input o_field_widget o_quick_editable o_invisible_modifier" name="marital_status" id="o_field_input_58"><option value="false" style="" selected="selected"></option><option value="&quot;ms1&quot;" style="">متزوج</option><option value="&quot;ms2&quot;" style="">اعزب</option><option value="&quot;ms3&quot;" style="">مطلقة</option><option value="&quot;ms4&quot;" style="">ارملة</option></select></td></tr><tr><td class="o_td_label"><label class="o_form_label o_invisible_modifier" for="o_field_input_59" data-original-title="" title="">عدد الاطفال</label></td><td style="width: 100%;"><input class="o_field_char o_field_widget o_quick_editable o_input o_invisible_modifier" name="child_num" placeholder="" type="text" autocomplete="off" id="o_field_input_59"></td></tr><tr><td class="o_td_label"><label class="o_form_label o_invisible_modifier" for="o_field_input_60" data-original-title="" title="">العنوان</label></td><td style="width: 100%;"><input class="o_field_char o_field_widget o_quick_editable o_input o_invisible_modifier" name="address" placeholder="" type="text" autocomplete="off" id="o_field_input_60"></td></tr><tr><td class="o_td_label"><label class="o_form_label o_invisible_modifier" for="o_field_input_61" data-original-title="" title="">نوع السكن</label></td><td style="width: 100%;"><select class="o_input o_field_widget o_quick_editable o_invisible_modifier" name="address_type" id="o_field_input_61"><option value="false" style="" selected="selected"></option><option value="&quot;at1&quot;" style="">ملك</option><option value="&quot;at2&quot;" style="">ايجار</option></select></td></tr></tbody></table></div><div class="o_group o_invisible_modifier"><table class="o_group o_inner_group o_group_col_6"><tbody><tr><td colspan="2" style="width: 100%;"><div class="o_horizontal_separator">البيانات الشخصية</div></td></tr><tr><td class="o_td_label"><label class="o_form_label o_required_modifier" for="o_field_input_62" data-original-title="" title="">الاسم</label></td><td style="width: 100%;"><input class="o_field_char o_field_widget o_quick_editable o_input o_required_modifier" name="name" placeholder="ادخل الاسم الرباعي" type="text" autocomplete="off" id="o_field_input_62"></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_63" data-original-title="" title="">النوع</label></td><td style="width: 100%;"><select class="o_input o_field_widget o_quick_editable" name="gender" id="o_field_input_63"><option value="false" style="" selected="selected"></option><option value="&quot;gender1&quot;" style="">ذكر</option><option value="&quot;gender2&quot;" style="">انثى</option></select></td></tr><tr><td class="o_td_label"><label class="o_form_label o_required_modifier" for="o_field_input_64" data-original-title="" title="">تاريخ تقديم الطلب</label></td><td style="width: 100%;"><div class="o_datepicker o_field_date o_field_widget o_quick_editable o_required_modifier" aria-atomic="true" id="datepicker114" data-target-input="nearest" name="request_date">
+        <input type="text" class="o_datepicker_input o_input datetimepicker-input" name="request_date" data-target="#datepicker114" autocomplete="off" placeholder="" id="o_field_input_64" value="01/10/2023">
+        <span class="o_datepicker_button"></span>
+    </div></td></tr><tr><td class="o_td_label"><label class="o_form_label o_required_modifier" for="o_field_input_65" data-original-title="" title="">بطاقة التعريف</label></td><td style="width: 100%;"><select class="o_input o_field_widget o_quick_editable o_required_modifier" name="id_card" id="o_field_input_65"><option value="false" style="display: none" selected="selected"></option><option value="&quot;id1&quot;" style="">الرقم الوظيفي</option><option value="&quot;id2&quot;" style="">الرقم العسكري</option><option value="&quot;id3&quot;" style="">الرقم الوطني</option><option value="&quot;id4&quot;" style="">الرقم الضريبي</option></select></td></tr><tr><td class="o_td_label"><label class="o_form_label o_invisible_modifier o_required_modifier" for="o_field_input_66" data-original-title="" title="">رقم التعريف</label></td><td style="width: 100%;"><input class="o_field_integer o_field_number o_field_widget o_quick_editable o_input o_invisible_modifier o_required_modifier" name="id_num" placeholder="" type="text" autocomplete="off" id="o_field_input_66" value="0"></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_67" data-original-title="" title="">الرتبة</label></td><td style="width: 100%;"><input class="o_field_char o_field_widget o_quick_editable o_input" name="rank" placeholder="" type="text" autocomplete="off" id="o_field_input_67"></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_68" data-original-title="" title="">الجهة التابع لها</label></td><td style="width: 100%;"><input class="o_field_char o_field_widget o_quick_editable o_input" name="company" placeholder="" type="text" autocomplete="off" id="o_field_input_68"></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_69" data-original-title="" title="">نوع الالتحاق بالمنظومة</label></td><td style="width: 100%;"><input class="o_field_char o_field_widget o_quick_editable o_input" name="masad_type" placeholder="" type="text" autocomplete="off" id="o_field_input_69"></td></tr></tbody></table><table class="o_group o_inner_group o_group_col_6"><tbody><tr><td colspan="2" style="width: 100%;"><div class="o_horizontal_separator">بيانات الدعم</div></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_70" data-original-title="" title="">نوع الدعم</label></td><td style="width: 100%;"><select class="o_input o_field_widget o_quick_editable" name="support_tybe" id="o_field_input_70"><option value="false" style="" selected="selected"></option><option value="&quot;s1&quot;" style="">مباشر</option><option value="&quot;s2&quot;" style="">غير مباشر</option></select></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_71" data-original-title="" title="">تصنيف الدعم</label></td><td style="width: 100%;"><div class="o_field_widget o_field_many2one o_quick_editable" aria-atomic="true" name="categ_id">
+        <div class="o_field_many2one_selection">
+            <div class="o_input_dropdown">
+                <input type="text" class="o_input ui-autocomplete-input" autocomplete="off" id="o_field_input_71">
+                <a role="button" class="o_dropdown_button" draggable="false"></a>
+            </div>
+            <button type="button" class="fa fa-external-link btn btn-secondary o_external_button" tabindex="-1" draggable="false" aria-label="External link" title="External link" style="display: none;"></button>
+        </div>
+        <div class="o_field_many2one_extra"></div>
+    </div></td></tr><tr><td class="o_td_label"><label class="o_form_label o_invisible_modifier" for="o_field_input_72" data-original-title="" title="">المبلغ</label></td><td style="width: 100%;"><input class="o_field_integer o_field_number o_field_widget o_quick_editable o_input o_invisible_modifier" name="price" placeholder="" type="text" autocomplete="off" id="o_field_input_72" value="0"></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_73" data-original-title="" title="">تفاصيل الدعم</label></td><td style="width: 100%;"><textarea class="o_field_text o_field_widget o_quick_editable o_input" style="overflow-y: hidden; height: 50px; resize: none;" name="support_details" placeholder="" type="text" autocomplete="off" id="o_field_input_73"></textarea><textarea disabled="disabled" style="position: absolute; opacity: 0; height: 10px; border-top-width: 0px; border-bottom-width: 0px; padding: 0px; overflow: hidden; top: -10000px; left: -10000px; width: 0px;"></textarea></td></tr></tbody></table><table class="o_group o_inner_group o_group_col_6"><tbody><tr><td colspan="2" style="width: 100%;"><div class="o_horizontal_separator">المرفقات</div></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_74" data-original-title="" title="">المرفقات</label></td><td style="width: 100%;"><div class="o_field_binary_file o_field_widget" aria-atomic="true" name="Doc">
+        <input type="text" class="o_input o_hidden" readonly="readonly" name="Doc">
+
+        <button type="button" class="btn btn-primary o_select_file_button" title="Select">Upload your file</button>
+        <button type="button" class="btn btn-secondary fa fa-pencil o_select_file_button o_hidden" title="Select" aria-label="Select"></button>
+        <button type="button" class="btn btn-secondary fa fa-trash-o o_clear_file_button o_hidden" title="Clear" aria-label="Clear"></button>
+
+        <span class="o_form_binary_progress o_hidden">Uploading...</span>
+        
+    <div class="o_hidden_input_file o_hidden" style="overflow-x: hidden" aria-atomic="true">
+        <form class="o_form_binary_form" method="post" enctype="multipart/form-data" action="/web/binary/upload">
+            <input type="hidden" name="csrf_token" value="dfc8dab41e5f607646ad44a9968db94a5a9e79e3o1704892597">
+            <input type="hidden" name="callback">
+            <input type="file" class="o_input_file" name="ufile" accept="*">
+            
+            
+            
+        
+        </form>
+        <iframe style="display: none"></iframe>
+    </div>
+
+    </div></td></tr></tbody></table><table class="o_group o_inner_group o_group_col_6"><tbody><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_75" data-original-title="" title="">بيانات اضافية</label></td><td style="width: 100%;"><select class="o_input o_field_widget o_quick_editable" name="test" id="o_field_input_75"><option value="false" style="" selected="selected"></option><option value="&quot;p1&quot;" style="">بيانات شخصية</option></select></td></tr><tr><td class="o_td_label"><label class="o_form_label o_invisible_modifier" for="o_field_input_76" data-original-title="" title="">الراتب الشهري</label></td><td style="width: 100%;"><input class="o_field_char o_field_widget o_quick_editable o_input o_invisible_modifier" name="monthly_salary" placeholder="" type="text" autocomplete="off" id="o_field_input_76"></td></tr><tr><td class="o_td_label"><label class="o_form_label o_invisible_modifier" for="o_field_input_77" data-original-title="" title="">الحالة الاجتماعية</label></td><td style="width: 100%;"><select class="o_input o_field_widget o_quick_editable o_invisible_modifier" name="marital_status" id="o_field_input_77"><option value="false" style="" selected="selected"></option><option value="&quot;ms1&quot;" style="">متزوج</option><option value="&quot;ms2&quot;" style="">اعزب</option><option value="&quot;ms3&quot;" style="">مطلقة</option><option value="&quot;ms4&quot;" style="">ارملة</option></select></td></tr><tr><td class="o_td_label"><label class="o_form_label o_invisible_modifier" for="o_field_input_78" data-original-title="" title="">عدد الاطفال</label></td><td style="width: 100%;"><input class="o_field_char o_field_widget o_quick_editable o_input o_invisible_modifier" name="child_num" placeholder="" type="text" autocomplete="off" id="o_field_input_78"></td></tr><tr><td class="o_td_label"><label class="o_form_label o_invisible_modifier" for="o_field_input_79" data-original-title="" title="">العنوان</label></td><td style="width: 100%;"><input class="o_field_char o_field_widget o_quick_editable o_input o_invisible_modifier" name="address" placeholder="" type="text" autocomplete="off" id="o_field_input_79"></td></tr><tr><td class="o_td_label"><label class="o_form_label o_invisible_modifier" for="o_field_input_80" data-original-title="" title="">نوع السكن</label></td><td style="width: 100%;"><select class="o_input o_field_widget o_quick_editable o_invisible_modifier" name="address_type" id="o_field_input_80"><option value="false" style="" selected="selected"></option><option value="&quot;at1&quot;" style="">ملك</option><option value="&quot;at2&quot;" style="">ايجار</option></select></td></tr></tbody></table></div><div class="o_group o_invisible_modifier"><table class="o_group o_inner_group o_group_col_6"><tbody><tr><td colspan="2" style="width: 100%;"><div class="o_horizontal_separator">البيانات الشخصية</div></td></tr><tr><td class="o_td_label"><label class="o_form_label o_required_modifier" for="o_field_input_81" data-original-title="" title="">الاسم</label></td><td style="width: 100%;"><input class="o_field_char o_field_widget o_quick_editable o_input o_required_modifier" name="name" placeholder="ادخل الاسم الرباعي" type="text" autocomplete="off" id="o_field_input_81"></td></tr><tr><td class="o_td_label"><label class="o_form_label o_required_modifier" for="o_field_input_82" data-original-title="" title="">تاريخ تقديم الطلب</label></td><td style="width: 100%;"><div class="o_datepicker o_field_date o_field_widget o_quick_editable o_required_modifier" aria-atomic="true" id="datepicker115" data-target-input="nearest" name="request_date">
+        <input type="text" class="o_datepicker_input o_input datetimepicker-input" name="request_date" data-target="#datepicker115" autocomplete="off" placeholder="" id="o_field_input_82" value="01/10/2023">
+        <span class="o_datepicker_button"></span>
+    </div></td></tr><tr><td class="o_td_label"><label class="o_form_label o_required_modifier" for="o_field_input_83" data-original-title="" title="">بطاقة التعريف</label></td><td style="width: 100%;"><select class="o_input o_field_widget o_quick_editable o_required_modifier" name="id_card" id="o_field_input_83"><option value="false" style="display: none" selected="selected"></option><option value="&quot;id1&quot;" style="">الرقم الوظيفي</option><option value="&quot;id2&quot;" style="">الرقم العسكري</option><option value="&quot;id3&quot;" style="">الرقم الوطني</option><option value="&quot;id4&quot;" style="">الرقم الضريبي</option></select></td></tr><tr><td class="o_td_label"><label class="o_form_label o_invisible_modifier o_required_modifier" for="o_field_input_84" data-original-title="" title="">رقم التعريف</label></td><td style="width: 100%;"><input class="o_field_integer o_field_number o_field_widget o_quick_editable o_input o_invisible_modifier o_required_modifier" name="id_num" placeholder="" type="text" autocomplete="off" id="o_field_input_84" value="0"></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_85" data-original-title="" title="">النوع</label></td><td style="width: 100%;"><select class="o_input o_field_widget o_quick_editable" name="gender" id="o_field_input_85"><option value="false" style="" selected="selected"></option><option value="&quot;gender1&quot;" style="">ذكر</option><option value="&quot;gender2&quot;" style="">انثى</option></select></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_86" data-original-title="" title="">الوظيفة</label></td><td style="width: 100%;"><input class="o_field_char o_field_widget o_quick_editable o_input" name="job_des" placeholder="" type="text" autocomplete="off" id="o_field_input_86"></td></tr></tbody></table><table class="o_group o_inner_group o_group_col_6"><tbody><tr><td colspan="2" style="width: 100%;"><div class="o_horizontal_separator">بيانات الدعم</div></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_87" data-original-title="" title="">نوع الدعم</label></td><td style="width: 100%;"><select class="o_input o_field_widget o_quick_editable" name="support_tybe" id="o_field_input_87"><option value="false" style="" selected="selected"></option><option value="&quot;s1&quot;" style="">مباشر</option><option value="&quot;s2&quot;" style="">غير مباشر</option></select></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_88" data-original-title="" title="">تصنيف الدعم</label></td><td style="width: 100%;"><div class="o_field_widget o_field_many2one o_quick_editable" aria-atomic="true" name="categ_id">
+        <div class="o_field_many2one_selection">
+            <div class="o_input_dropdown">
+                <input type="text" class="o_input ui-autocomplete-input" autocomplete="off" id="o_field_input_88">
+                <a role="button" class="o_dropdown_button" draggable="false"></a>
+            </div>
+            <button type="button" class="fa fa-external-link btn btn-secondary o_external_button" tabindex="-1" draggable="false" aria-label="External link" title="External link" style="display: none;"></button>
+        </div>
+        <div class="o_field_many2one_extra"></div>
+    </div></td></tr><tr><td class="o_td_label"><label class="o_form_label o_invisible_modifier" for="o_field_input_89" data-original-title="" title="">المبلغ</label></td><td style="width: 100%;"><input class="o_field_integer o_field_number o_field_widget o_quick_editable o_input o_invisible_modifier" name="price" placeholder="" type="text" autocomplete="off" id="o_field_input_89" value="0"></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_90" data-original-title="" title="">تفاصيل الدعم</label></td><td style="width: 100%;"><textarea class="o_field_text o_field_widget o_quick_editable o_input" style="overflow-y: hidden; height: 50px; resize: none;" name="support_details" placeholder="" type="text" autocomplete="off" id="o_field_input_90"></textarea><textarea disabled="disabled" style="position: absolute; opacity: 0; height: 10px; border-top-width: 0px; border-bottom-width: 0px; padding: 0px; overflow: hidden; top: -10000px; left: -10000px; width: 0px;"></textarea></td></tr></tbody></table><table class="o_group o_inner_group o_group_col_6"><tbody><tr><td colspan="2" style="width: 100%;"><div class="o_horizontal_separator">المرفقات</div></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_91" data-original-title="" title="">المرفقات</label></td><td style="width: 100%;"><div class="o_field_binary_file o_field_widget" aria-atomic="true" name="Doc">
+        <input type="text" class="o_input o_hidden" readonly="readonly" name="Doc">
+
+        <button type="button" class="btn btn-primary o_select_file_button" title="Select">Upload your file</button>
+        <button type="button" class="btn btn-secondary fa fa-pencil o_select_file_button o_hidden" title="Select" aria-label="Select"></button>
+        <button type="button" class="btn btn-secondary fa fa-trash-o o_clear_file_button o_hidden" title="Clear" aria-label="Clear"></button>
+
+        <span class="o_form_binary_progress o_hidden">Uploading...</span>
+        
+    <div class="o_hidden_input_file o_hidden" style="overflow-x: hidden" aria-atomic="true">
+        <form class="o_form_binary_form" method="post" enctype="multipart/form-data" action="/web/binary/upload">
+            <input type="hidden" name="csrf_token" value="dfc8dab41e5f607646ad44a9968db94a5a9e79e3o1704892597">
+            <input type="hidden" name="callback">
+            <input type="file" class="o_input_file" name="ufile" accept="*">
+            
+            
+            
+        
+        </form>
+        <iframe style="display: none"></iframe>
+    </div>
+
+    </div></td></tr></tbody></table><table class="o_group o_inner_group o_group_col_6"><tbody><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_92" data-original-title="" title="">بيانات اضافية</label></td><td style="width: 100%;"><select class="o_input o_field_widget o_quick_editable" name="test" id="o_field_input_92"><option value="false" style="" selected="selected"></option><option value="&quot;p1&quot;" style="">بيانات شخصية</option></select></td></tr><tr><td class="o_td_label"><label class="o_form_label o_invisible_modifier" for="o_field_input_93" data-original-title="" title="">رقم التلفون</label></td><td style="width: 100%;"><input class="o_field_char o_field_widget o_quick_editable o_input o_invisible_modifier" name="phone_num" placeholder="" type="text" autocomplete="off" id="o_field_input_93"></td></tr><tr><td class="o_td_label"><label class="o_form_label o_invisible_modifier" for="o_field_input_94" data-original-title="" title="">العمر</label></td><td style="width: 100%;"><input class="o_field_char o_field_widget o_quick_editable o_input o_invisible_modifier" name="age" placeholder="" type="text" autocomplete="off" id="o_field_input_94"></td></tr><tr><td class="o_td_label"><label class="o_form_label o_invisible_modifier" for="o_field_input_95" data-original-title="" title="">الراتب الشهري</label></td><td style="width: 100%;"><input class="o_field_char o_field_widget o_quick_editable o_input o_invisible_modifier" name="monthly_salary" placeholder="" type="text" autocomplete="off" id="o_field_input_95"></td></tr><tr><td class="o_td_label"><label class="o_form_label o_invisible_modifier" for="o_field_input_96" data-original-title="" title="">الحالة الاجتماعية</label></td><td style="width: 100%;"><select class="o_input o_field_widget o_quick_editable o_invisible_modifier" name="marital_status" id="o_field_input_96"><option value="false" style="" selected="selected"></option><option value="&quot;ms1&quot;" style="">متزوج</option><option value="&quot;ms2&quot;" style="">اعزب</option><option value="&quot;ms3&quot;" style="">مطلقة</option><option value="&quot;ms4&quot;" style="">ارملة</option></select></td></tr><tr><td class="o_td_label"><label class="o_form_label o_invisible_modifier" for="o_field_input_97" data-original-title="" title="">عدد الاطفال</label></td><td style="width: 100%;"><input class="o_field_char o_field_widget o_quick_editable o_input o_invisible_modifier" name="child_num" placeholder="" type="text" autocomplete="off" id="o_field_input_97"></td></tr><tr><td class="o_td_label"><label class="o_form_label o_invisible_modifier" for="o_field_input_98" data-original-title="" title="">العنوان</label></td><td style="width: 100%;"><input class="o_field_char o_field_widget o_quick_editable o_input o_invisible_modifier" name="address" placeholder="" type="text" autocomplete="off" id="o_field_input_98"></td></tr><tr><td class="o_td_label"><label class="o_form_label o_invisible_modifier" for="o_field_input_99" data-original-title="" title="">نوع السكن</label></td><td style="width: 100%;"><select class="o_input o_field_widget o_quick_editable o_invisible_modifier" name="address_type" id="o_field_input_99"><option value="false" style="" selected="selected"></option><option value="&quot;at1&quot;" style="">ملك</option><option value="&quot;at2&quot;" style="">ايجار</option></select></td></tr></tbody></table></div><div class="o_group o_invisible_modifier"><table class="o_group o_inner_group o_group_col_6"><tbody><tr><td colspan="2" style="width: 100%;"><div class="o_horizontal_separator">بيانات المؤسسة</div></td></tr><tr><td class="o_td_label"><label class="o_form_label o_required_modifier" for="o_field_input_100" data-original-title="" title="">الاسم</label></td><td style="width: 100%;"><input class="o_field_char o_field_widget o_quick_editable o_input o_required_modifier" name="name" placeholder="ادخل اسم المؤسسة" type="text" autocomplete="off" id="o_field_input_100"></td></tr><tr><td class="o_td_label"><label class="o_form_label o_required_modifier" for="o_field_input_101" data-original-title="" title="">تاريخ تقديم الطلب</label></td><td style="width: 100%;"><div class="o_datepicker o_field_date o_field_widget o_quick_editable o_required_modifier" aria-atomic="true" id="datepicker116" data-target-input="nearest" name="request_date">
+        <input type="text" class="o_datepicker_input o_input datetimepicker-input" name="request_date" data-target="#datepicker116" autocomplete="off" placeholder="" id="o_field_input_101" value="01/10/2023">
+        <span class="o_datepicker_button"></span>
+    </div></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_102" data-original-title="" title="">نوع المؤسسة</label></td><td style="width: 100%;"><select class="o_input o_field_widget o_quick_editable" name="company_type" id="o_field_input_102"><option value="false" style="" selected="selected"></option><option value="&quot;ct1&quot;" style="">حكومي</option><option value="&quot;ct2&quot;" style="">منظمات</option><option value="&quot;ct3&quot;" style="">خاصة</option></select></td></tr><tr><td class="o_td_label"><label class="o_form_label o_required_modifier" for="o_field_input_103" data-original-title="" title="">بطاقة التعريف</label></td><td style="width: 100%;"><select class="o_input o_field_widget o_quick_editable o_required_modifier" name="id_card" id="o_field_input_103"><option value="false" style="display: none" selected="selected"></option><option value="&quot;id1&quot;" style="">الرقم الوظيفي</option><option value="&quot;id2&quot;" style="">الرقم العسكري</option><option value="&quot;id3&quot;" style="">الرقم الوطني</option><option value="&quot;id4&quot;" style="">الرقم الضريبي</option></select></td></tr><tr><td class="o_td_label"><label class="o_form_label o_invisible_modifier o_required_modifier" for="o_field_input_104" data-original-title="" title="">رقم التعريف</label></td><td style="width: 100%;"><input class="o_field_integer o_field_number o_field_widget o_quick_editable o_input o_invisible_modifier o_required_modifier" name="id_num" placeholder="" type="text" autocomplete="off" id="o_field_input_104" value="0"></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_105" data-original-title="" title="">رقم التلفون</label></td><td style="width: 100%;"><input class="o_field_char o_field_widget o_quick_editable o_input" name="phone_num" placeholder="" type="text" autocomplete="off" id="o_field_input_105"></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_106" data-original-title="" title="">العنوان</label></td><td style="width: 100%;"><input class="o_field_char o_field_widget o_quick_editable o_input" name="address" placeholder="" type="text" autocomplete="off" id="o_field_input_106"></td></tr></tbody></table><table class="o_group o_inner_group o_group_col_6"><tbody><tr><td colspan="2" style="width: 100%;"><div class="o_horizontal_separator">بيانات الدعم</div></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_107" data-original-title="" title="">نوع الدعم</label></td><td style="width: 100%;"><select class="o_input o_field_widget o_quick_editable" name="support_tybe" id="o_field_input_107"><option value="false" style="" selected="selected"></option><option value="&quot;s1&quot;" style="">مباشر</option><option value="&quot;s2&quot;" style="">غير مباشر</option></select></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_108" data-original-title="" title="">تصنيف الدعم</label></td><td style="width: 100%;"><div class="o_field_widget o_field_many2one o_quick_editable" aria-atomic="true" name="categ_id">
+        <div class="o_field_many2one_selection">
+            <div class="o_input_dropdown">
+                <input type="text" class="o_input ui-autocomplete-input" autocomplete="off" id="o_field_input_108">
+                <a role="button" class="o_dropdown_button" draggable="false"></a>
+            </div>
+            <button type="button" class="fa fa-external-link btn btn-secondary o_external_button" tabindex="-1" draggable="false" aria-label="External link" title="External link" style="display: none;"></button>
+        </div>
+        <div class="o_field_many2one_extra"></div>
+    </div></td></tr><tr><td class="o_td_label"><label class="o_form_label o_invisible_modifier" for="o_field_input_109" data-original-title="" title="">المبلغ</label></td><td style="width: 100%;"><input class="o_field_integer o_field_number o_field_widget o_quick_editable o_input o_invisible_modifier" name="price" placeholder="" type="text" autocomplete="off" id="o_field_input_109" value="0"></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_110" data-original-title="" title="">تفاصيل الدعم</label></td><td style="width: 100%;"><textarea class="o_field_text o_field_widget o_quick_editable o_input" style="overflow-y: hidden; height: 50px; resize: none;" name="support_details" placeholder="" type="text" autocomplete="off" id="o_field_input_110"></textarea><textarea disabled="disabled" style="position: absolute; opacity: 0; height: 10px; border-top-width: 0px; border-bottom-width: 0px; padding: 0px; overflow: hidden; top: -10000px; left: -10000px; width: 0px;"></textarea></td></tr></tbody></table><table class="o_group o_inner_group o_group_col_6"><tbody><tr><td colspan="2" style="width: 100%;"><div class="o_horizontal_separator">المرفقات</div></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_111" data-original-title="" title="">المرفقات</label></td><td style="width: 100%;"><div class="o_field_binary_file o_field_widget" aria-atomic="true" name="Doc">
+        <input type="text" class="o_input o_hidden" readonly="readonly" name="Doc">
+
+        <button type="button" class="btn btn-primary o_select_file_button" title="Select">Upload your file</button>
+        <button type="button" class="btn btn-secondary fa fa-pencil o_select_file_button o_hidden" title="Select" aria-label="Select"></button>
+        <button type="button" class="btn btn-secondary fa fa-trash-o o_clear_file_button o_hidden" title="Clear" aria-label="Clear"></button>
+
+        <span class="o_form_binary_progress o_hidden">Uploading...</span>
+        
+    <div class="o_hidden_input_file o_hidden" style="overflow-x: hidden" aria-atomic="true">
+        <form class="o_form_binary_form" method="post" enctype="multipart/form-data" action="/web/binary/upload">
+            <input type="hidden" name="csrf_token" value="dfc8dab41e5f607646ad44a9968db94a5a9e79e3o1704892597">
+            <input type="hidden" name="callback">
+            <input type="file" class="o_input_file" name="ufile" accept="*">
+            
+            
+            
+        
+        </form>
+        <iframe style="display: none"></iframe>
+    </div>
+
+    </div></td></tr></tbody></table></div></div><table class="o_group o_inner_group"><tbody><tr><td style="width: 50%;"><div class="o_notebook" data-name="_default_"><div class="o_notebook_headers"><ul class="nav nav-tabs"><li class="nav-item"><a data-toggle="tab" disable_anchor="true" href="#notebook_page_112" class="nav-link active" role="tab">قرار اعضاءاللجنة</a></li></ul></div><div class="tab-content"><div class="tab-pane active" id="notebook_page_112"><div class="o_field_one2many o_field_widget o_quick_editable o_field_x2many o_field_x2many_list" name="member_ids" id="o_field_input_120" data-original-title="" title=""><div class="o_x2m_control_panel"><div role="toolbar" aria-label="Control panel buttons" class="o_cp_buttons"></div><div role="search" class="o_cp_pager"></div></div><div class="o_list_view"><div class="table-responsive"><table class="o_list_table table table-sm table-hover table-striped o_list_table_ungrouped o_empty_list" style="table-layout: fixed;"><thead><tr><th data-name="name_id" tabindex="-1" class="o_column_sortable" data-original-title="" title="" style="width: 33.3333%;">اسم العضو</th><th data-name="solution" tabindex="-1" class="o_column_sortable" data-original-title="" title="" style="width: 70px;">الموافقه</th><th data-name="agree" tabindex="-1" data-original-title="" title="" style="width: 33.3333%;">الحالة</th><th data-name="coment" tabindex="-1" class="o_column_sortable" data-original-title="" title="" style="width: 33.3333%;">تعليق العضو</th><th class="o_list_record_remove_header" style="width: 32px;"></th></tr></thead><tbody class="ui-sortable"><tr><td colspan="5" class="o_field_x2many_list_row_add"><a href="#" role="button">Add a line</a></td></tr><tr><td colspan="5">&nbsp;</td></tr><tr><td colspan="5">&nbsp;</td></tr><tr><td colspan="5">&nbsp;</td></tr></tbody><tfoot><tr><td class="name_id"></td><td class="solution"></td><td class="agree"></td><td class="coment"></td><td></td></tr></tfoot></table></div></div></div></div></div></div></td></tr></tbody></table></div></div></div></div>
+</div></div><div><div class="o_loading_indicator "></div><div class="o_notification_manager"></div><div></div><div class="o_effects_manager"></div><div class="o_dialog_container"></div><div class="o_popover_container"></div></div><div class="o_ChatWindowManager"></div><div class="o_DialogManager"></div><ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete dropdown-menu ui-front" style="display: none;"></ul><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><ul id="ui-id-2" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete dropdown-menu ui-front" style="display: none;"></ul><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><ul id="ui-id-3" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete dropdown-menu ui-front" style="display: none;"></ul><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><ul id="ui-id-4" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete dropdown-menu ui-front" style="display: none;"></ul><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div></body></html>

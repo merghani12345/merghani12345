@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="areport_assocition2" model="ir.actions.report">
+            <field name="name">تصاديق طلب الدعم</field>
+            <field name="model">masad.association</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">masad_association.areport_assocition1</field>
+            <field name="report_file">masad_association.areport_assocition1</field>
+            <field name="print_report_name">'Report for Estate Property - %s' % (object.name)</field>
+            <field name="binding_model_id" ref="model_masad_association"/>
+            <field name="binding_type">report</field>
+        </record>
+
+
+
+
+
+          <record id="areport_assocition3" model="ir.actions.report">
+            <field name="name">كشف عام للطلبات حسب النوع والشهر للعام</field>
+            <field name="model">masad.association</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">masad_association.areport_assocition22</field>
+            <field name="report_file">masad_association.areport_assocition22</field>
+            <field name="print_report_name">'Report for Estate Property - %s' % (object.name)</field>
+            <field name="binding_model_id" ref="model_masad_association"/>
+            <field name="binding_type">report</field>
+        </record>
+
+
+
+
+
+
+        <record id="areport_assocition5" model="ir.actions.report">
+            <field name="name">  الطلبات حسب حالة الدعم</field>
+            <field name="model">masad.association</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">masad_association.areport_assocition44</field>
+            <field name="report_file">masad_association.areport_assocition44</field>
+            <field name="print_report_name">'Report for Estate Property - %s' % (object.name)</field>
+            <field name="binding_model_id" ref="model_masad_association"/>
+            <field name="binding_type">report</field>
+        </record>
+
+
+    </data>
+</odoo>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+                <meta charset="utf-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+                <title>Odoo - general</title>
+                <link type="image/x-icon" rel="shortcut icon" href="http://localhost:8069/web/image/res.company/1/favicon">
+                <script id="web.layout.odooscript" type="text/javascript">
+                    var odoo = {
+                        csrf_token: "2fb9a3963297c9ac1da528f7f52d836e7fc54449o1704705004",
+                        debug: "1",
+                    };
+                </script>
+                <script type="text/javascript">
+                    odoo.__session_info__ = {"uid": 12, "is_system": false, "is_admin": false, "user_context": {"lang": "en_US", "tz": "Africa/Khartoum", "uid": 12}, "db": "masad_DB", "server_version": "15.0", "server_version_info": [15, 0, 0, "final", 0, ""], "support_url": "https://www.odoo.com/buy", "name": "Advisor", "username": "Advisor", "partner_display_name": "Advisor", "company_id": 1, "partner_id": 14, "web.base.url": "http://localhost:8069", "active_ids_limit": 20000, "profile_session": null, "profile_collectors": null, "profile_params": null, "max_file_upload_size": 134217728, "home_action_id": false, "cache_hashes": {"translations": "3e3e3662962d53a0d7dce4b78680b64cceb942a3", "load_menus": "39410d43e0bd15f7dfa918f425431b9f1ae02e2b19f09231f8245ca74d1d132a", "qweb": "1872a4424e1af69526aea4ff929368adf60b7b6d608ad77afd315fb6a9f133b9", "assets_discuss_public": "7db29ad7d4c5da1b989fce1382ba9eafee4abfbb3fd770cf8e32219eadae34ed"}, "currencies": {"139": {"symbol": "\u062c.\u0633.", "position": "after", "digits": [69, 2]}, "2": {"symbol": "$", "position": "before", "digits": [69, 2]}}, "user_companies": {"current_company": 1, "allowed_companies": {"1": {"id": 1, "name": "My Company", "sequence": 0}}}, "show_effect": "True", "display_switch_company_menu": false, "user_id": [12], "notification_type": "email", "odoobot_initialized": true};
+                    odoo.reloadMenus = () => fetch(`/web/webclient/load_menus/${odoo.__session_info__.cache_hashes.load_menus}`).then(res => res.json());
+                    odoo.loadMenusPromise = odoo.reloadMenus();
+                    odoo.loadTemplatesPromise = fetch(`/web/webclient/qweb/${odoo.__session_info__.cache_hashes.qweb}?bundle=web.assets_qweb`).then(doc => doc.text());
+                    // Block to avoid leaking variables in the script scope
+                    {
+                        const { user_context,  cache_hashes } = odoo.__session_info__;
+                        // Prefetch translations to speedup webclient. This is done in JS because link rel="prefetch"
+                        // is not yet supported on safari.
+                        fetch(`/web/webclient/translations/${cache_hashes.translations}?lang=${user_context.lang}`);
+                    }
+                </script>
+                <link type="text/css" rel="stylesheet" href="Odoo%20-%20general_files/web.assets_common.min.css" data-asset-bundle="web.assets_common" data-asset-version="2e662b5">
+                <link type="text/css" rel="stylesheet" href="Odoo%20-%20general_files/web.assets_backend.min.css" data-asset-bundle="web.assets_backend" data-asset-version="bb42356">
+                <script type="text/javascript" src="Odoo%20-%20general_files/web.assets_common.min.js" data-asset-bundle="web.assets_common" data-asset-version="2e662b5"></script>
+                <script type="text/javascript" src="Odoo%20-%20general_files/web.assets_backend.min.js" data-asset-bundle="web.assets_backend" data-asset-version="bb42356"></script>
+                <script type="text/javascript" src="Odoo%20-%20general_files/web.assets_backend_prod_only.min.js" data-asset-bundle="web.assets_backend_prod_only" data-asset-version="a7255b5"></script>
+            <script type="text/javascript" src="Odoo%20-%20general_files/en_US"></script></head>
+            <body class="o_web_client" data-odoo-version="new" data-debug-mode="1">
+            
+        <header><nav data-command-category="navbar" class="o_main_navbar"><div class="o-dropdown dropdown o-dropdown--no-caret o_navbar_apps_menu"><button class="dropdown-toggle  " title="Home Menu" data-hotkey="h" aria-expanded="false"><i class="fa fa-th-large"></i></button></div><a href="#menu_id=122&amp;action=338" role="menuitem" tabindex="0" class="dropdown-item o_menu_brand" data-section="122" data-menu-xmlid="masad_association.menu_root">نظام الدعم المجتمعي</a><div role="menu" class="o_menu_sections"><a href="#menu_id=123&amp;action=338" role="menuitem" title="سجل الطلبات" data-hotkey="1" tabindex="0" class="dropdown-item o_nav_entry" data-section="123" data-menu-xmlid="masad_association.menu_1">سجل الطلبات</a><a href="#menu_id=288&amp;action=111" role="menuitem" title="اجتماع" data-hotkey="2" tabindex="0" class="dropdown-item o_nav_entry" data-section="288" data-menu-xmlid="masad_association.meeting">اجتماع</a></div><div role="menu" class="o_menu_systray"><div class="o-dropdown dropdown o-dropdown--no-caret o_debug_manager"><button class="dropdown-toggle o-dropdown--narrow  " aria-expanded="false"><i class="fa fa-bug"></i></button></div><div class="o_RtcActivityNotice dropdown"><div class="o_RtcInvitations"></div></div><div class="o_MessagingMenu dropdown"><a href="#" title="Conversations" role="button" aria-expanded="false" aria-haspopup="true" class="o_MessagingMenu_toggler dropdown-toggle o-no-caret o-dropdown--narrow"><i role="img" aria-label="Messages" class="o_MessagingMenu_icon fa fa-comments"></i><span class="o_MessagingMenu_counter badge badge-pill">1</span></a></div><div class="o_mail_systray_item dropdown o_no_notification">
+            <a class="dropdown-toggle o-no-caret o-dropdown--narrow" data-toggle="dropdown" data-display="static" aria-expanded="false" title="Activities" href="#" role="button">
+                <i class="fa fa-clock-o" role="img" aria-label="Activities"></i> <span class="o_notification_counter badge badge-pill">0</span>
+            </a>
+            <div class="o_mail_systray_dropdown dropdown-menu dropdown-menu-right" role="menu">
+                <div class="o_mail_systray_dropdown_items">
+        
+        
+            <div class="dropdown-item-text text-center o_no_activity d-flex justify-content-center">
+                <span>Congratulations, you're done with your activities.</span>
+            </div>
+        
+        
+    </div>
+            </div>
+        </div><div class="o-dropdown dropdown o-dropdown--no-caret o_user_menu"><button class="dropdown-toggle  " aria-expanded="false"><img src="Odoo%20-%20general_files/image.svg" alt="User" class="rounded-circle o_user_avatar"> <span class="oe_topbar_name">Advisor (masad_DB)</span></button></div></div></nav></header><div class="o_action_manager"><div class="o_action o_view_controller"><div data-command-category="actions" class="o_control_panel"><div class="o_cp_top"><div class="o_cp_top_left"><ol role="navigation" class="breadcrumb"><li title="Previous menu" class="breadcrumb-item o_back_button" data-hotkey="b"><a href="#">Discuss</a></li><li class="breadcrumb-item active"><span class="text-muted">general</span></li></ol></div><div class="o_cp_top_right"><div role="search" class="o_cp_searchview"></div></div></div><div class="o_cp_bottom"><div class="o_cp_bottom_left"><div role="toolbar" aria-label="Control panel buttons" class="o_cp_buttons"><div>
+    <div class="o_form_buttons_view o_hidden" role="toolbar" aria-label="Main actions">
+        <button type="button" class="btn btn-primary o_form_button_edit" title="Edit record" data-hotkey="a">
+            Edit
+        </button>
+        <button type="button" class="btn btn-secondary o_form_button_create" title="Create record" data-hotkey="c">
+            Create
+        </button>
+    </div>
+    <div class="o_form_buttons_edit" role="toolbar" aria-label="Main actions" data-original-title="" title="">
+        <button type="button" class="btn btn-primary o_form_button_save" title="Save record" data-hotkey="s">
+            Save
+        </button>
+        <button type="button" class="btn btn-secondary o_form_button_cancel" title="Discard record" data-hotkey="j">
+            Discard
+        </button>
+    </div>
+</div></div></div><div class="o_cp_bottom_right"><div role="search" class="btn-group o_search_options position-static"></div><div role="search" class="o_cp_pager"><nav aria-label="Pager" class="o_pager"><span class="o_pager_counter mr-2"><span class="o_pager_value">1</span><span> / </span><span class="o_pager_limit">1</span></span><span aria-atomic="true" class="btn-group"><button type="button" disabled="disabled" aria-label="Previous page" title="Previous page" tabindex="-1" class="fa fa-chevron-left btn btn-secondary o_pager_previous rounded-left" data-hotkey="p"></button><button type="button" disabled="disabled" aria-label="Next page" title="Next page" tabindex="-1" class="fa fa-chevron-right btn btn-secondary o_pager_next rounded-right" data-hotkey="n"></button></span></nav></div></div></div></div>
+    <div class="o_content"><div class="o_form_view o_xxl_form_view o_form_editable"><div class="o_form_sheet_bg" data-command-category="app"><div class="clearfix position-relative o_form_sheet"><div class="o_not_full oe_button_box"></div><div class="o_field_image o_field_widget oe_avatar" aria-atomic="true" name="image_128" data-original-title="" title=""><img class="img img-fluid" alt="Binary file" src="data:image/png;base64,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" name="image_128" style="max-width: 90px; max-height: 90px;" width="90" height="90" border="1">
+        
+            <div class="o_form_image_controls">
+                <button class="fa fa-pencil fa-lg float-left o_select_file_button" title="Edit" aria-label="Edit" style=""></button>
+                <button class="fa fa-trash-o fa-lg float-right o_clear_file_button" title="Clear" aria-label="Clear" style=""></button>
+
+                <span class="o_form_binary_progress" style="display: none;">Uploading...</span>
+                
+    <div class="o_hidden_input_file " aria-atomic="true">
+        <form class="o_form_binary_form" method="post" enctype="multipart/form-data" action="/web/binary/upload">
+            <input type="hidden" name="csrf_token" value="2fb9a3963297c9ac1da528f7f52d836e7fc54449o1704705004">
+            <input type="hidden" name="callback">
+            <input type="file" class="o_input_file" name="ufile" accept="image/*">
+            
+                    
+                
+        </form>
+        <iframe style="display: none"></iframe>
+    </div>
+
+            </div>
+        
+    </div><div class="oe_title"><label class="o_form_label" for="o_field_input_10" data-original-title="" title="">Group Name</label><h1>
+                                #<input class="o_field_char o_field_widget o_quick_editable o_input o_field_translate o_required_modifier oe_inline" name="name" placeholder="e.g. support" type="text" autocomplete="off" id="o_field_input_10" value="لجنة المسؤلية المجتمعية"><span class="o_field_translate btn btn-link o_required_modifier oe_inline" placeholder="e.g. support">EN</span></h1></div><table class="o_group o_inner_group o_label_nowrap"><tbody><tr><td class="o_td_label"></td><td style="width: 100%;"></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_11" data-original-title="" title="">Description</label></td><td style="width: 100%;"><textarea class="o_field_text o_field_widget o_quick_editable o_input" style="overflow-y: hidden; height: 50px; resize: none;" name="description" placeholder="Topics discussed in this group..." type="text" autocomplete="off" id="o_field_input_11">General announcements for all employees.</textarea><textarea disabled="disabled" style="position: absolute; opacity: 0; height: 10px; border-top-width: 0px; border-bottom-width: 0px; padding: 0px; overflow: hidden; top: -10000px; left: -10000px; width: 906px;">General announcements for all employees.</textarea></td></tr></tbody></table><table class="o_group o_inner_group o_invisible_modifier"><tbody><tr><td class="o_td_label"><label class="o_form_label fa fa-envelope-o" for="o_field_input_12" style="min-width: 20px;" data-original-title="" title=""> </label></td><td style="width: 100%;"><div name="alias_def"><div class="o_field_widget o_field_many2one o_quick_editable o_with_button oe_read_only oe_inline" aria-atomic="true" name="alias_id">
+        <div class="o_field_many2one_selection">
+            <div class="o_input_dropdown">
+                <input type="text" class="o_input ui-autocomplete-input" autocomplete="off" id="o_field_input_12" value="Inactive Alias">
+                <a role="button" class="o_dropdown_button" draggable="false"></a>
+            </div>
+            <button type="button" class="fa fa-external-link btn btn-secondary o_external_button" tabindex="-1" draggable="false" aria-label="External link" title="External link"></button>
+        </div>
+        <div class="o_field_many2one_extra"></div>
+    </div><div class="oe_edit_only oe_inline" name="edit_alias" style="display: inline;"><input class="o_field_char o_field_widget o_quick_editable o_input oe_inline" name="alias_name" placeholder="" type="text" autocomplete="off" id="o_field_input_22" data-original-title="" title="">@<span class="o_field_char o_field_widget o_quick_editable o_readonly_modifier o_field_empty oe_inline" name="alias_domain" data-original-title="" title=""></span></div></div></td></tr><tr><td class="o_td_label"></td><td style="width: 100%;"></td></tr></tbody></table><div class="o_notebook" data-name="_default_"><div class="o_notebook_headers"><ul class="nav nav-tabs"><li class="nav-item"><a data-toggle="tab" disable_anchor="true" href="#notebook_page_25" class="nav-link" role="tab" aria-selected="false">Privacy</a></li><li class="nav-item"><a data-toggle="tab" disable_anchor="true" href="#notebook_page_27" class="nav-link active" role="tab" aria-selected="true">Members</a></li><li class="nav-item o_invisible_modifier"><a data-toggle="tab" disable_anchor="true" href="#notebook_page_28" class="nav-link" role="tab">Integrations</a></li></ul></div><div class="tab-content"><div class="tab-pane" id="notebook_page_25"><table class="o_group o_inner_group o_label_nowrap"><tbody><tr><td class="o_td_label"><label class="o_form_label o_required_modifier" for="o_field_input_15" data-original-title="" title="">Who can follow the group's activities?</label></td><td style="width: 100%;"><div class="o_field_radio o_vertical o_field_widget o_quick_editable o_required_modifier" name="public" role="radiogroup" aria-label="Who can follow the group's activities?" id="o_field_input_15">
+    <div class="custom-control custom-radio o_radio_item" aria-atomic="true">
+        <input type="radio" class="custom-control-input o_radio_input" name="radio26" data-value="public" data-index="0" id="radio26_public">
+        <label class="custom-control-label o_form_label" for="radio26_public">Everyone</label>
+    </div>
+
+    <div class="custom-control custom-radio o_radio_item" aria-atomic="true">
+        <input type="radio" class="custom-control-input o_radio_input" name="radio26" data-value="private" data-index="1" id="radio26_private">
+        <label class="custom-control-label o_form_label" for="radio26_private">Invited people only</label>
+    </div>
+
+    <div class="custom-control custom-radio o_radio_item" aria-atomic="true">
+        <input type="radio" class="custom-control-input o_radio_input" checked="checked" name="radio26" data-value="groups" data-index="2" id="radio26_groups">
+        <label class="custom-control-label o_form_label" for="radio26_groups">Selected group of users</label>
+    </div>
+</div></td></tr><tr><td class="o_td_label"><label class="o_form_label o_required_modifier" for="o_field_input_16" data-original-title="" title="">Authorized Group</label></td><td style="width: 100%;"><div class="o_field_widget o_field_many2one o_quick_editable o_with_button o_required_modifier" aria-atomic="true" name="group_public_id">
+        <div class="o_field_many2one_selection">
+            <div class="o_input_dropdown">
+                <input type="text" class="o_input ui-autocomplete-input" autocomplete="off" id="o_field_input_16" value="User types / Internal User">
+                <a role="button" class="o_dropdown_button" draggable="false"></a>
+            </div>
+            <button type="button" class="fa fa-external-link btn btn-secondary o_external_button" tabindex="-1" draggable="false" aria-label="External link" title="External link"></button>
+        </div>
+        <div class="o_field_many2one_extra"></div>
+    </div></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_17" data-original-title="" title="">Auto Subscribe Groups</label></td><td style="width: 100%;"><div class="o_field_many2manytags o_input o_field_widget o_quick_editable" name="group_ids">
+    
+        
+        
+        <div class="badge badge-pill  o_tag_color_0" data-color="0" data-index="0" data-id="1" title="Tag color: No color">
+            
+            
+                
+                <span class="o_badge_text" title="User types / Internal User"><span role="img" aria-label="Tag color: No color"></span><span class="o_tag_badge_text">User types / Internal User</span></span>
+            
+            
+            <a href="#" class="fa fa-times o_delete" title="Delete" aria-label="Delete"></a>
+        </div>
+    
+<div class="o_field_widget o_field_many2one o_quick_editable" aria-atomic="true" name="group_ids">
+        <div class="o_field_many2one_selection">
+            <div class="o_input_dropdown">
+                <input type="text" class="o_input ui-autocomplete-input" autocomplete="off" id="o_field_input_17">
+                <a role="button" class="o_dropdown_button" draggable="false"></a>
+            </div>
+            
+        </div>
+        <div class="o_field_many2one_extra"></div>
+    </div></div></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_18" data-original-title="" title="">Auto Subscribe Departments</label></td><td style="width: 100%;"><div class="o_field_many2manytags o_input o_field_widget o_quick_editable" name="subscription_department_ids">
+    
+<div class="o_field_widget o_field_many2one o_quick_editable" aria-atomic="true" name="subscription_department_ids">
+        <div class="o_field_many2one_selection">
+            <div class="o_input_dropdown">
+                <input type="text" class="o_input ui-autocomplete-input" autocomplete="off" id="o_field_input_18">
+                <a role="button" class="o_dropdown_button" draggable="false"></a>
+            </div>
+            
+        </div>
+        <div class="o_field_many2one_extra"></div>
+    </div></div></td></tr></tbody></table></div><div class="tab-pane active" id="notebook_page_27"><div class="o_field_one2many o_field_widget o_quick_editable o_field_x2many o_field_x2many_list" name="channel_last_seen_partner_ids" id="o_field_input_24" data-original-title="" title=""><div class="o_x2m_control_panel"><div role="toolbar" aria-label="Control panel buttons" class="o_cp_buttons"></div><div role="search" class="o_cp_pager"></div></div><div class="o_list_view"><div class="table-responsive"><table class="o_list_table table table-sm table-hover table-striped o_list_table_ungrouped" style="table-layout: fixed;"><thead><tr><th data-name="partner_id" tabindex="-1" class="o_column_sortable" data-original-title="" title="" style="width: 385px;">Recipient<span class="o_resize"></span></th><th data-name="partner_email" tabindex="-1" data-original-title="" title="" style="width: 689px;">Email<span class="o_resize"></span></th><th class="o_list_record_remove_header" style="width: 32px;"></th></tr></thead><tbody class="ui-sortable"><tr class="o_data_row" data-id="mail.channel.partner_10"><td class="o_data_cell o_field_cell o_list_many2one o_readonly_modifier o_required_modifier" tabindex="-1" title="manger" name="partner_id">manger</td><td class="o_data_cell o_field_cell o_list_char o_readonly_modifier" tabindex="-1" title="admin@example.com" name="partner_email">admin@example.com</td><td class="o_list_record_remove"><button class="fa fa-trash-o" name="delete" aria-label="Delete row 1"></button></td></tr><tr class="o_data_row" data-id="mail.channel.partner_12"><td class="o_data_cell o_field_cell o_list_many2one o_readonly_modifier o_required_modifier" tabindex="-1" title="user" name="partner_id">user</td><td class="o_data_cell o_field_cell o_list_char o_readonly_modifier" tabindex="-1" title="" name="partner_email"></td><td class="o_list_record_remove"><button class="fa fa-trash-o" name="delete" aria-label="Delete row 2"></button></td></tr><tr class="o_data_row" data-id="mail.channel.partner_14"><td class="o_data_cell o_field_cell o_list_many2one o_readonly_modifier o_required_modifier" tabindex="-1" title="member" name="partner_id">member</td><td class="o_data_cell o_field_cell o_list_char o_readonly_modifier" tabindex="-1" title="" name="partner_email"></td><td class="o_list_record_remove"><button class="fa fa-trash-o" name="delete" aria-label="Delete row 3"></button></td></tr><tr class="o_data_row" data-id="mail.channel.partner_16"><td class="o_data_cell o_field_cell o_list_many2one o_readonly_modifier o_required_modifier" tabindex="-1" title="ahmed" name="partner_id">ahmed</td><td class="o_data_cell o_field_cell o_list_char o_readonly_modifier" tabindex="-1" title="" name="partner_email"></td><td class="o_list_record_remove"><button class="fa fa-trash-o" name="delete" aria-label="Delete row 4"></button></td></tr><tr class="o_data_row" data-id="mail.channel.partner_18"><td class="o_data_cell o_field_cell o_list_many2one o_readonly_modifier o_required_modifier" tabindex="-1" title="mohammed" name="partner_id">mohammed</td><td class="o_data_cell o_field_cell o_list_char o_readonly_modifier" tabindex="-1" title="" name="partner_email"></td><td class="o_list_record_remove"><button class="fa fa-trash-o" name="delete" aria-label="Delete row 5"></button></td></tr><tr class="o_data_row" data-id="mail.channel.partner_20"><td class="o_data_cell o_field_cell o_list_many2one o_readonly_modifier o_required_modifier" tabindex="-1" title="Advisor" name="partner_id">Advisor</td><td class="o_data_cell o_field_cell o_list_char o_readonly_modifier" tabindex="-1" title="" name="partner_email"></td><td class="o_list_record_remove"><button class="fa fa-trash-o" name="delete" aria-label="Delete row 6"></button></td></tr><tr class="o_data_row" data-id="mail.channel.partner_22"><td class="o_data_cell o_field_cell o_list_many2one o_readonly_modifier o_required_modifier" tabindex="-1" title="admin" name="partner_id">admin</td><td class="o_data_cell o_field_cell o_list_char o_readonly_modifier" tabindex="-1" title="" name="partner_email"></td><td class="o_list_record_remove"><button class="fa fa-trash-o" name="delete" aria-label="Delete row 7"></button></td></tr><tr><td colspan="3" class="o_field_x2many_list_row_add"><a href="#" role="button">Add a line</a></td></tr></tbody><tfoot><tr><td class="partner_id"></td><td class="partner_email"></td><td></td></tr></tfoot></table></div></div></div></div><div class="tab-pane" id="notebook_page_28"></div></div></div></div></div></div></div>
+</div></div><div><div class="o_loading_indicator "></div><div class="o_notification_manager"></div><div></div><div class="o_effects_manager"></div><div class="o_dialog_container"></div><div class="o_popover_container"></div></div><div class="o_ChatWindowManager"></div><div class="o_DialogManager"></div><ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete dropdown-menu ui-front" style="display: none;"></ul><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><ul id="ui-id-2" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete dropdown-menu ui-front" style="display: none;"></ul><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><ul id="ui-id-3" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete dropdown-menu ui-front" style="display: none;"></ul><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><ul id="ui-id-4" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete dropdown-menu ui-front" style="display: none;"></ul><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div></body></html>

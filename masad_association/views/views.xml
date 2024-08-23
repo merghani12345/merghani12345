@@ -1,0 +1,438 @@
+<odoo>
+    <data>
+        <!-- explicit list view definition -->
+
+        <record model="ir.ui.view" id="masad_civil_view_form">
+            <field name="name">masad.civil.view.form</field>
+            <field name="model">masad.association</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <field name="state" widget="statusbar" readonly="1"/>
+                        <button name="button_approve" type="object" string="approve" states="draft"
+                                groups="masad_association.group_confirm_assoction"/>
+                        <button name="button_confirm" type="object" string="confirm" states="to approve"
+                                groups="masad_association.group_confirm_assoction"/>
+                        <button name="button_done" type="object" string="done" states="confirm"
+                                groups="masad_association.group_admin_assoction"/>
+                        <button name="button_cancel" type="object" string="cancel" states="confirm"
+                                groups="masad_association.group_admin_assoction"/>
+                        <button name="button_to_draft" type="object" string="draft"
+                                groups="masad_association.group_confirm_assoction"/>
+                    </header>
+
+                    <sheet>
+
+                        <sheet>
+                             <h2>
+                               <field name="priority" widget="priority" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                            </h2>
+                            <h1>
+                                <field name="ref" readonly="1"/>
+                            </h1>
+
+                            <field name="classification" attrs="{'readonly': [('state', '!=', 'draft')]}" widget='radio' options="{'horizontal':true}" />
+                            <!--افراد-->
+
+                            <group attrs="{'invisible':[('classification','!=','cf1')],'readonly': [('state', '!=', 'draft')]}">
+
+                                <field name="individual" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <group attrs="{'invisible':[('individual','!=','a1')],'readonly': [('state', '!=', 'draft')]}"
+                                       string="البيانات الشخصية">
+                                    <field name="job_state" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="job_stat" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="name" placeholder="ادخل الاسم الرباعي"
+                                           attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="request_date" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="gender" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="company" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="id_card" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="id_num" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="job_des" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="address" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="phone_num" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                </group>
+
+
+                                <group attrs="{'invisible':[('individual','!=','a1')],'readonly': [('state', '!=', 'draft')]}"
+                                       string="بيانات الدعم">
+                                    <field name="support_tybe" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="categ_id" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="price"
+                                           attrs="{'invisible':[('support_tybe','!=','s1')],'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="total_price"
+                                           attrs="{'invisible':[('support_tybe','!=','s1')],'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="currency_id"
+                                           attrs="{'invisible':[('support_tybe','!=','s1')],'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="support_details" placeholder="ادخل تفاصيل الدعم"
+                                           attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="receve_date" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="test" attrs="{'readonly': [('state', '!=', 'draft')]}"
+                                           placeholder="عرض بيانات شخصية"/>
+                                    <field name="monthly_salary"
+                                           attrs="{'invisible' :[('test','!=','p1')],'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="marital_status"
+                                           attrs="{'invisible' :[('test','!=','p1')],'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="age"
+                                           attrs="{'invisible' :[('test','!=','p1')],'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="child_num"
+                                           attrs="{'invisible' :[('test','!=','p1')],'readonly': [('state', '!=', 'draft')]}"/>
+                                    <h5>مرفقات الطلب</h5>
+                                    <div>
+                                        <field name="Doc"
+                                               attrs="{'invisible':[('individual','!=','a1')],'readonly': [('state', '!=', 'draft')]}"/>
+                                    </div>
+                                </group>
+
+
+                                <!-- نظامي-->
+
+                                <group attrs="{'invisible':[('individual','!=','b2')],'readonly': [('state', '!=', 'draft')]}"
+                                       string="البيانات الشخصية">
+                                    <field name="job_stat" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="name" placeholder="ادخل الاسم الرباعي"
+                                           attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="gender" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="request_date" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="id_card" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="id_num" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="rank" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="company" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="address" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="phone_num" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="masad" attrs="{'readonly': [('state', '!=', 'draft')]}"
+                                           widget="radio" options="{'horizontal':true}"/>
+                                    <field name="circle"
+                                           attrs="{'readonly': [('state', '!=', 'draft')],'invisible':[('masad','!=','msd1')]}"/>
+                                    <field name="boss"
+                                           attrs="{'readonly': [('state', '!=', 'draft')],'invisible':[('masad','!=','msd1')]}"/>
+                                    <field name="masad_type"
+                                           attrs="{'readonly': [('state', '!=', 'draft')],'invisible':[('masad','!=','msd1')]}"/>
+                                </group>
+
+                                <group attrs="{'invisible':[('individual','!=','b2')],'readonly': [('state', '!=', 'draft')]}"
+                                       string="بيانات الدعم">
+                                    <field name="support_tybe" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="categ_id" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="price"
+                                           attrs="{'invisible':[('support_tybe','!=','s1')],'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="total_price"
+                                           attrs="{'invisible':[('support_tybe','!=','s1')],'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="currency_id"
+                                           attrs="{'invisible':[('support_tybe','!=','s1')],'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="support_details" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="receve_date" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="test" attrs="{'readonly': [('state', '!=', 'draft')]}"
+                                           placeholder="اضافة بيانات شخصية"/>
+                                    <field name="monthly_salary"
+                                           attrs="{'invisible' :[('test','!=','p1')],'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="marital_status"
+                                           attrs="{'invisible' :[('test','!=','p1')],'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="age"
+                                           attrs="{'invisible' :[('test','!=','p1')],'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="child_num"
+                                           attrs="{'invisible' :[('test','!=','p1')],'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="address_type"
+                                           attrs="{'invisible' :[('test','!=','p1')],'readonly': [('state', '!=', 'draft')]}"/>
+                                    <h5>مرفقات الطلب</h5>
+                                    <div>
+                                        <field name="Doc"
+                                               attrs="{'invisible':[('individual','!=','b2')],'readonly': [('state', '!=', 'draft')]}"/>
+                                    </div>
+                                </group>
+                            </group>
+
+
+                            <!--المؤسسات-->
+                            <group attrs="{'invisible':[('classification','!=','cf2')],'readonly': [('state', '!=', 'draft')]}">
+
+                                <group string="بيانات المؤسسة">
+                                    <field name="name" placeholder="ادخل اسم المؤسسة"
+                                           attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="request_date" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="company_type" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="id_card" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="id_num" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="phone_num" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="address" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                </group>
+
+
+                                <group string="بيانات الدعم">
+                                    <field name="support_tybe" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="categ_id" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="price"
+                                           attrs="{'invisible':[('support_tybe','!=','s1')],'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="total_price"
+                                           attrs="{'invisible':[('support_tybe','!=','s1')],'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="currency_id"
+                                           attrs="{'invisible':[('support_tybe','!=','s1')],'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="support_details" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="receve_date" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                    <h5>مرفقات الطلب</h5>
+                                    <div>
+                                        <field name="Doc" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                    </div>
+                                </group>
+                            </group>
+
+                        </sheet>
+
+                        <group>
+                            <notebook groups="masad_association.menu_page_member">
+                                <page string="قرار اعضاءاللجنة">
+
+                                    <field name="member_ids">
+                                        <tree string="no_employee" editable="bottom">
+                                            <field name="user_id" invisible="1"/>
+                                            <field name="name_id"/>
+                                            <field name="solution"/>
+                                            <field name="agree"/>
+                                            <field name="coment"/>
+                                        </tree>
+                                        <form string="no_employee" editable="bottom">
+                                            <field name="name_id"/>
+                                            <field name="solution"/>
+                                            <field name="agree"/>
+                                            <field name="coment"/>
+                                        </form>
+                                    </field>
+                                </page>
+                            </notebook>
+                        </group>
+                    </sheet>
+
+                </form>
+
+            </field>
+        </record>
+
+
+        <!--trees list-->
+        <record model="ir.ui.view" id="masad_view_tree">
+            <field name="name">masad tree view</field>
+            <field name="model">masad.association</field>
+            <field name="arch" type="xml">
+                <tree decoration-success="state == 'done'" decoration-danger="state == 'cancel'"
+                      decoration-warning="state == 'to approve'" decoration-info="state == 'draft|'">
+                    <field name="ref"/>
+                    <field name="name"/>
+                    <field name="classification"/>
+                    <field name="categ_id"/>
+                    <field name="price"/>
+                    <field name="currency_id"/>
+                    <field name="request_date"/>
+                    <field name="state" widget="badge"
+                           decoration-danger="state == 'cancel'"
+                           decoration-warning="state == 'to approve'"
+                           decoration-info="state == 'draft|'"
+                           decoration-success="state == 'done'"
+                           decoration-primary="state == 'confirm'"
+                           optional="show"/>
+                     <field name="priority" widget="priority"/>
+
+                </tree>
+            </field>
+        </record>
+
+        <!--  povit and graphs -->
+
+        <record id="masad_pivot" model="ir.ui.view">
+            <field name="name">view.masad.ne.pivot"t</field>
+            <field name="model">masad.association</field>
+            <field name="arch" type="xml">
+                <pivot string="masad" sample="1">
+                    <field name="name" type="row"/>
+                    <field name="categ_id" type="col"/>
+                </pivot>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="masad_graph">
+            <field name="name">view.masad.graph</field>
+            <field name="model">masad.association</field>
+            <field name="arch" type="xml">
+                <graph string="masad" sample="1">
+                    <field name="categ_id" type="row"/>
+                    <field name="individual" type="row"/>
+                </graph>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="masad_calendar2">
+            <field name="name">view.masad.calendar2</field>
+            <field name="model">masad.association</field>
+            <field name="priority" eval="2"/>
+            <field name="arch" type="xml">
+                <calendar string="Calendar View" date_start="request_date" color="name" hide_time="true"
+                          event_limit="5">
+                    <field name="name"/>
+                    <field name="request_date"/>
+                </calendar>
+            </field>
+        </record>
+
+        <record id="masad_kanban" model="ir.ui.view">
+            <field name="name">view.masad.ne.kanban</field>
+            <field name="model">masad.association</field>
+            <field name="arch" type="xml">
+                <kanban class="o_kanban_mobile" sample="1">
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_global_click">
+                                <div>
+                                    <strong>
+                                        <field name="request_date" color="#ffffff"/>
+                                    </strong>
+                                </div>
+                                <div>
+                                    <strong>
+                                        <field name="name"/>
+                                    </strong>
+                                </div>
+                                <div>
+                                    <span><field name="categ_id"/>&amp;nbsp;</span>
+
+                                </div>
+                                <div>
+                                    <span><field name="ref"/>&amp;nbsp;</span>
+
+                                </div>
+                                <div>
+                                    <span>
+                                        <field name="state" widget="badge"
+                                               decoration-danger="state == 'cancel'"
+                                               decoration-warning="state == 'to approve'"
+                                               decoration-info="state == 'draft|'"
+                                               decoration-success="state == 'done'"
+                                               decoration-primary="state == 'confirm'"
+                                               optional="show"/>
+                                    </span>
+                                     <field name="priority" widget="priority"/>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+
+        <record id="masad_association_linesearch_view" model="ir.ui.view">
+            <field name="name">masad.association.line.search.view</field>
+            <field name="model">masad.association</field>
+            <field name="arch" type="xml">
+                <search string="masad">
+                    <field name="categ_id"/>
+                    <field name="name"/>
+                    <field name="ref"/>
+                    <field name="individual"/>
+                    <field name="state"/>
+                    <field name="job_stat"/>
+                    <field name="currency_id"/>
+                    <separator/>
+
+                    <group string="Group By">
+                        <filter
+                                string="تصنيف الدعم"
+                                name="groupby_categ_id"
+                                context="{'group_by': 'categ_id'}"/>
+
+                        <filter
+                                string="تصنيف الطلب"
+                                name="groupby_classification"
+                                context="{'group_by': 'classification'}"/>
+                        <filter
+                                string="الحالةالوظيفية"
+                                name="groupby_job_stat"
+                                context="{'group_by': 'job_stat'}"/>
+                        <filter
+                                string="حالة الطلب"
+                                name="groupby_state"
+                                context="{'group_by': 'state'}"/>
+                        <filter
+                                string="تصنيف بالعملة"
+                                name="groupby_currency_id"
+                                context="{'group_by': 'currency_id'}"/>
+
+
+                    </group>
+
+
+                </search>
+            </field>
+        </record>
+
+
+        <!-- actions opening views on models -->
+
+        <record model="ir.actions.act_window" id="masad_civil_action">
+            <field name="name">انشاء طلب دعم جديد</field>
+            <field name="res_model">masad.association</field>
+            <field name="view_mode">form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">رئاسة منظومة الصناعات الدفاعية</p>
+                <p>نظام سجل طلبات الدعم المجتمعي</p>
+            </field>
+        </record>
+
+
+        <record model="ir.actions.act_window" id="masad_tree_action">
+            <field name="name">سجل الطلبات</field>
+            <field name="res_model">masad.association</field>
+            <field name="view_mode">tree,calendar,form,kanban,pivot,graph</field>
+            <field name="view_id" ref="masad_view_tree"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">رئاسة منظومة الصناعات الدفاعية</p>
+                <p>نظام سجل طلبات الدعم المجتمعي</p>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="masad_pivot_action">
+            <field name="name">حصر الدعومات</field>
+            <field name="res_model">masad.association</field>
+            <field name="view_mode">pivot</field>
+            <field name="view_id" ref="masad_pivot"/>
+        </record>
+
+
+        <record model="ir.actions.act_window" id="masad_graph_action">
+            <field name="name">الرسم البياني للدعومات</field>
+            <field name="res_model">masad.association</field>
+            <field name="view_mode">graph</field>
+            <field name="view_id" ref="masad_graph"/>
+        </record>
+
+
+        <!-- root menu  -->
+
+        <menuitem name="نظام الدعم المجتمعي" id="masad_association.menu_root"/>
+
+        <!-- menus action  -->
+
+
+        <menuitem name="الاعدادات" id="masad_association.menu_0" parent="masad_association.menu_root"
+                  groups="masad_association.group_admin_assoction" sequence="6"/>
+
+        <menuitem name="طلب دعم" id="masad_association.menu_user" parent="masad_association.menu_root"
+                  action="masad_civil_action"
+                  groups="masad_association.group_user_assoction" sequence="1"/>
+
+        <menuitem name="سجل الطلبات" id="masad_association.menu_1" parent="masad_association.menu_root"
+                  action="masad_tree_action"
+                  groups="masad_association.menu_support" sequence="2"/>
+
+        <menuitem name="اجتماع" id="masad_association.meeting" parent="masad_association.menu_root"
+                  groups="masad_association.group_meeting" action="mail.action_discuss" sequence="5"/>
+
+        <menuitem name="كشف الدعومات" id="masad_association.menu_suport" parent="masad_association.menu_root"
+                  groups="masad_association.group_admin_assoction" sequence="4"/>
+
+        <menuitem name="حصر الدعومات" id="masad_association.menu_pivot" parent="masad_association.menu_suport"
+                  action="masad_pivot_action"/>
+
+        <menuitem name="الرسم البياني للدعومات" id="masad_association.menu_graph" parent="masad_association.menu_suport"
+                  action="masad_graph_action"/>
+
+    </data>
+</odoo>

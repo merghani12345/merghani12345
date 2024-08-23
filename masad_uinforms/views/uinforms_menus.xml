@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="root_uiforme" name="MASAD Uniform" groups="masad_uinforms.group_uniform_menu">
+        <menuitem id="uinform_menu" name="Uniform">
+            <menuitem id="uinform_data" name="Uniform Employee" action="uinform_employee_action"/>
+            <menuitem id="uinform_line_data" name="Uniform Details" action="uinform_employee_line_action"/>
+
+            <menuitem id="attachment_id_uniforom" name="المحاضر والمرفقات" action="uniform_attachment_action"/>
+
+            <menuitem id="mermber_unifom_action_id_uniforom" name="الاعضاء" action="mermber_unifom_action"/>
+
+        </menuitem>
+        <menuitem id="uiform_configuration" name="Settings" >
+            <menuitem id="catgegory_employee_menu" name="Catgegory employee" action="catgegory_employee_action"/>
+            <menuitem id="types_items_menu" name="Types Items" action="Typesitems_action"/>
+            <menuitem id="color_items_menu" name="Color Items" action="color_items_action"/>
+            <menuitem id="size_items_menu" name="Size Items" action="size_items_action"/>
+            <menuitem id="Technical_FORM" name="Technical" action="uinform_employee_line_action_technical" groups="masad_uinforms.group_uniform_technical"/>
+        </menuitem>
+    </menuitem>
+</odoo>

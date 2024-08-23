@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+<!--                    Category ########                   -->
+    <!-- Catgegory employee action -->
+    <record id="catgegory_employee_action" model="ir.actions.act_window">
+        <field name="name">Catgegor yemployee</field>
+        <field name="res_model">catgegory.employee</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <!-- Catgegory_employee list view -->
+    <record id="Catgegory_employee_tree_view" model="ir.ui.view">
+        <field name="name">Catgegory.employee.tree.view</field>
+        <field name="model">catgegory.employee</field>
+        <field name="arch" type="xml">
+            <tree string="Category"  editable="bottom">
+                <field name="name"/>
+                <field name="code"/>
+            </tree>
+        </field>
+    </record>
+
+
+
+    <!-- Catgegory_employee form view -->
+    <record id="catgegory_employee_form_view" model="ir.ui.view">
+        <field name="name">catgegory.employee.form.view</field>
+        <field name="model">catgegory.employee</field>
+        <field name="arch" type="xml">
+            <form string="Property Tag">
+                <sheet>
+                    <group>
+                        <field name="name" />
+                        <field name="code" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <!--  #########3    types items           ##########                          -->
+
+    <!-- Typesitems action -->
+    <record id="Typesitems_action" model="ir.actions.act_window">
+        <field name="name">Types Items(Types)</field>
+        <field name="res_model">type.items</field>
+        <field name="view_mode">tree,pivot</field>
+    </record>
+
+    <!-- Typesitems list view -->
+    <record id="Typesitems_tree_view" model="ir.ui.view">
+        <field name="name">typesi.tems.tree.view</field>
+        <field name="model">type.items</field>
+        <field name="arch" type="xml">
+            <tree string="Category"  editable="bottom">
+                <field name="name"/>
+                <field name="type_items" />
+                <field name="designing_ar" optional="hide" />
+                <field name="designing_en" optional="hide" />
+                <field name="specification_ar" optional="hide" />
+                <field name="specification_en" optional="hide" />
+
+                <!--field name="product_qty"/-->
+                <field name="code"/>
+
+            </tree>
+        </field>
+    </record>
+    <record id="typesitems_view_pivot" model="ir.ui.view">
+        <field name="name">Typesitems.view.pivot</field>
+        <field name="model">type.items</field>
+        <field name="arch" type="xml">
+            <pivot string="Uniform" sample="1">
+
+                <field name="name" type="row"/>
+                <field name="type_items" type="row"/>
+
+
+                </pivot>
+        </field>
+    </record>
+
+
+    <record id="types_items_form_view" model="ir.ui.view">
+        <field name="name">types.items.form.view</field>
+        <field name="model">type.items</field>
+        <field name="arch" type="xml">
+            <form string="Types Items">
+                <sheet>
+                    <group>
+                        <field name="name" />
+                        <field name="code" />
+                        <field name="type_items"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <!--                    Category ########                   -->
+    <!-- color items action -->
+    <record id="color_items_action" model="ir.actions.act_window">
+        <field name="name">colors Items(s)</field>
+        <field name="res_model">color.items</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <!-- color.items list view -->
+    <record id="color_items_tree_view" model="ir.ui.view">
+        <field name="name">color.items.tree.view</field>
+        <field name="model">color.items</field>
+        <field name="arch" type="xml">
+            <tree string="Category"  editable="bottom">
+                <field name="name"/>
+                <field name="code"/>
+                <field name="color" widget="color_picker"/>
+            </tree>
+        </field>
+    </record>
+
+
+
+    <!-- color.items form view -->
+    <record id="color_items_form_view" model="ir.ui.view">
+        <field name="name">color.items.form.view</field>
+        <field name="model">color.items</field>
+        <field name="arch" type="xml">
+            <form string="color Items">
+                <sheet>
+                    <group>
+                        <field name="name" />
+                        <field name="code" />
+                        <field name="color" widget="color_picker"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+        <!-- color items action -->
+    <record id="size_items_action" model="ir.actions.act_window">
+        <field name="name">size.items(size)</field>
+        <field name="res_model">size.items</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+
+
+
+    <!-- size.items list view -->
+    <record id="size_items_tree_view" model="ir.ui.view">
+        <field name="name">size.itemstree.view</field>
+        <field name="model">size.items</field>
+        <field name="arch" type="xml">
+            <tree string="Category"  editable="bottom">
+                <field name="name"/>
+                <field name="code"/>
+            </tree>
+        </field>
+    </record>
+
+
+
+    <!-- color.items form view -->
+    <record id="size_items_form_view" model="ir.ui.view">
+        <field name="name">size.items.form.view</field>
+        <field name="model">size.items</field>
+        <field name="arch" type="xml">
+            <form string="Size.items">
+                <sheet>
+                    <group>
+                        <field name="name" />
+                        <field name="code" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+<!-- eeeeeeeeeeeeeeeeeeeeeeeee   -->
+
+       <!--uinform.employeeaction -->
+    <record id="uniform_attachment_action" model="ir.actions.act_window">
+        <field name="name">Attachment</field>
+        <field name="res_model">uniform.attachment</field>
+        <field name="view_mode">tree,form,calendar</field>
+    </record>
+        <record id="mermber_unifom_action" model="ir.actions.act_window">
+        <field name="name">أعضاء اللجنة</field>
+        <field name="res_model">member.unifrom</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- uinform employeelist view -->
+    <record id="uniform_attachment_tree_view" model="ir.ui.view">
+        <field name="name">uniform_attachment.tree.view</field>
+        <field name="model">uniform.attachment</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="date"/>
+
+            </tree>
+        </field>
+    </record>
+    <record id="umermber_unifom_form_tree" model="ir.ui.view">
+        <field name="name">mermber.unifom.form.view</field>
+        <field name="model">member.unifrom</field>
+        <field name="arch" type="xml">
+            <tree string="أعضاء الجنة">
+                            <field name="employee_id"/>
+                            <field name="name" />
+                            <field name="department_id" />
+                            <field name="job_member" />
+            </tree>
+
+        </field>
+    </record>
+
+    <!-- المحاضرview -->
+
+    <record id="umermber_unifom_form_view" model="ir.ui.view">
+        <field name="name">mermber.unifom.form.view</field>
+        <field name="model">member.unifrom</field>
+        <field name="arch" type="xml">
+            <form string="أعضاء الجنة">
+                <sheet>
+                    <group>
+                            <field name="employee_id"/>
+                            <field name="name" />
+                            <field name="department_id" />
+                            <field name="job_member" />
+                    </group>
+                </sheet>
+            </form>
+
+        </field>
+    </record>
+    <record id="uniform_attachment_form_view" model="ir.ui.view">
+        <field name="name">uniform.attachment.form.view</field>
+        <field name="model">uniform.attachment</field>
+        <field name="arch" type="xml">
+            <form string="محضر الاجتماع">
+                <sheet>
+                    <group colspan="4" col="4">
+
+                            <field name="name" />
+                            <field name="location"/>
+                    </group>
+                    <group colspan="4" col="4">
+                    <field name="date"/>
+                    <field name="start_date" />
+                    </group>
+
+                    <notebook>
+
+                        <page string="الحضور">
+                            <field name="empo_attachment_line_ids" >
+                                <tree string="الحضور"  editable="bottom">
+
+                                    <field name="employee_id"/>
+                                    <field name="department_id"/>
+                                    <field name="job_member"/>
+                                </tree>
+                                <form string="الحضور">
+                                    <field name="employee_id"/>
+                                    <field name="department_id"/>
+                                    <field name="job_member"/>
+                                </form>
+
+                            </field>
+                             <notebook>
+                                <page string="الاعتذار">
+
+                                    <field name="empo_attachment_line_ids2" >
+                                            <tree string="الاعتذار"  editable="bottom">
+
+                                                <field name="employee_id"/>
+                                                <field name="department_id"/>
+                                                <field name="job_member"/>
+                                            </tree>
+                                            <form string="الاعتذار">
+                                                <field name="employee_id"/>
+                                                <field name="department_id"/>
+                                                <field name="job_member"/>
+                                            </form>
+
+                                    </field>
+                               </page>
+                             </notebook>
+                        </page>
+
+
+
+                        <page string="التكاليف">
+                            <field name="task_ids" >
+                                <tree string="التكاليف"  editable="bottom">
+
+                                    <field name="name"/>
+                                    <field name="member_task"/>
+                                    <field name="period_task"/>
+                                    <field name="mark_task"/>
+                                </tree>
+                                <form string="التكاليف">
+                                    <field name="name"/>
+                                    <field name="member_task"/>
+                                    <field name="period_task"/>
+                                    <field name="mark_task"/>
+                                </form>
+
+                            </field>
+                        </page>
+
+                        <page string="المرفقات">
+                            <field name="attachment_line_ids" >
+                                <tree string="مرفق"  editable="bottom">
+                                    <field name="batchfile" widget="Many2one_binary"/>
+                                    <field name="name"/>
+                                </tree>
+                                <form string="مرفق">
+                                    <field name="name"/>
+                                    <field name="batchfile"/>
+                                </form>
+
+                            </field>
+                        </page>
+
+                        <page string="الاجندة">
+                            <group string="الاجندة">
+                                <field name="description"/>
+                            </group>
+                        </page>
+
+                        <page string="التوصيات">
+                            <group string="التوصيات">
+                                <field name="description2"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+
+        </field>
+    </record>
+    <record model="ir.ui.view" id="uniform_attachment_form_view_calendar">
+            <field name="name">uniform.attachment,form.view.calendar</field>
+            <field name="model">uniform.attachment</field>
+            <field name="priority" eval="2"/>
+            <field name="arch" type="xml">
+                <calendar string="Calendar View"  date_start="date" color="name" hide_time="true" event_limit="5"  >
+                    <field name="name"/>
+                    <field name="date"/>
+                </calendar>
+            </field>
+        </record>
+
+</odoo>
+

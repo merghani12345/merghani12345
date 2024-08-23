@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--uinform.employeeaction -->
+    <record id="uinform_employee_action" model="ir.actions.act_window">
+        <field name="name">Uinform Employee</field>
+        <field name="res_model">uinform.employee</field>
+        <field name="view_mode">tree,form,graph,pivot</field>
+    </record>
+
+    <!-- uinform employeelist view -->
+    <record id="uinform_employee_tree_view" model="ir.ui.view">
+        <field name="name">uinform employee.tree.view</field>
+        <field name="model">uinform.employee</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="employee_id"/>
+                <field name="categ_id"/>
+                <field name="date"/>
+                <field name="gender"/>
+
+            </tree>
+        </field>
+    </record>
+
+    <!-- uinform_employee form view -->
+    <record id="uinform_employee_form_view" model="ir.ui.view">
+        <field name="name">uinform.employee.form.view</field>
+        <field name="model">uinform.employee</field>
+        <field name="arch" type="xml">
+            <form string="Uniform Employee">
+
+                <sheet>
+                    <group col="4">
+                        <h1>
+                        
+                            <field name="employee_id" />
+                      
+                        </h1>
+                    </group>
+                    <group >
+                        <h2>
+                            <field name="name"/>
+                        </h2>
+                    </group>
+                    <group colspan="4" col="4">
+                        <field name="categ_id" widget="selection"/>
+                        <field name="date"/>
+
+                        <field name="gender"/>
+
+                    </group>
+                    <notebook>
+                        <page string="Uniform Items">
+                            <field name="uiform_line_ids" >
+                                <tree string="Uinform"  editable="bottom">
+                                    <field name="employee_line_id"/>
+                                    <field name="name"  optional="hide" />
+                                    <field name="gender"  optional="hide" />
+                                    <field name="categ_id"/>
+                                    <field name="date"/>
+                                    <field name="type_items_id" />
+                                    <field name="product_code"  optional="hide"/>
+                                    <field name="color_id"/>
+                                    <field name="color_items_id"/>
+                                    <field name="size_id"/>
+                                    <field name="size_items_id"/>
+                                    <field name="qty"/>
+                                </tree>
+                                <form string="Uinform">
+                                    <field name="name"/>
+                                    <field name="product_code"/>
+                                    <field name="employee_line_id"/>
+                                    <field name="gender"/>
+                                    <field name="categ_id"/>
+                                    <field name="date"/>
+                                    <field name="type_items_id"/>
+                                    <field name="color_id"/>
+                                    <field name="color_items_id"/>
+                                    <field name="size_id"/>
+                                    <field name="size_items_id"/>
+                                    <field name="qty"/>
+                                </form>
+
+                            </field>
+                        </page>
+                        <page string="Other Description">
+                            <group>
+                                <field name="description"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <!--     filter by groub and sarech to viwe uinform_employee -->
+
+    <record id="uinform_employeeesearch_view" model="ir.ui.view">
+        <field name="name">uinform.employee.search.view</field>
+        <field name="model">uinform.employee</field>
+        <field name="arch" type="xml">
+            <search string="Uniform">
+                <field name="employee_id"/>
+                <field name="gender"/>
+                <field name="name"/>
+                <field name="categ_id"/>
+                <field name="date"/>
+                <separator/>
+
+                <group string="Group By">
+                    <filter
+                            string="Category"
+                            name="groupby_categ_id"
+                            context="{'group_by': 'categ_id'}"/>
+                    <filter
+                            string="Employe Name"
+                            name="groupby_employee_id"
+                            context="{'group_by': 'employee_id'}"/>
+
+                    <filter
+                            string="No Employee"
+                            name="groupby_name_id"
+                            context="{'group_by': 'name'}"/>
+
+                    <filter
+                            string="Dtae"
+                            name="groupby_date"
+                            context="{'group_by': 'date'}"/>
+                    <filter
+                            string="Gender"
+                            name="groupby_gender"
+                            context="{'group_by': 'gender'}"/>
+
+                </group>
+            </search>
+        </field>
+    </record>
+
+        <!--graph form-->
+    <record model="ir.ui.view" id="view_uinform_employee_graph">
+        <field name="name">unform.employee.graph</field>
+        <field name="model">uinform.employee</field>
+        <field name="arch" type="xml">
+            <graph string="Uniform" sample="1">
+                <field name="categ_id"/>
+            </graph>
+        </field>
+    </record>
+
+        <!--piovt form main-->
+    <record id="view_uinform_employeeine_pivot" model="ir.ui.view">
+        <field name="name">view.uinform.employee.ne.pivot"t</field>
+        <field name="model">uinform.employee</field>
+        <field name="arch" type="xml">
+            <pivot string="Uniform" sample="1">
+                <field name="categ_id" type="row"/>
+
+                </pivot>
+        </field>
+    </record>
+
+
+
+
+    <!-- uinform employeelist view -->
+    <record id="uinform_employee_line_tree_view" model="ir.ui.view">
+        <field name="name">uinform employee.tree.line.view</field>
+        <field name="model">uinform.employee.line</field>
+        <field name="arch" type="xml">
+            <tree >
+                <field name="name"  optional="hide" />
+                <field name="employee_line_id" />
+                <field name="gender"  optional="hide" />
+                <field name="categ_id"/>
+                <field name="date"  optional="hide" />
+                <field name="type_items_id"/>
+
+                <field name="product_code"  optional="hide"/>
+                <field name="color_id"/>
+                <field name="color_items_id"/>
+                <field name="size_id"/>
+                <field name="size_items_id"/>
+                <field name="qty" />
+
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="uinform_employee_line_form_view" model="ir.ui.view">
+        <field name="name">uinform.employee.form.line.view</field>
+        <field name="model">uinform.employee.line</field>
+        <field name="arch" type="xml">
+            <form string="Types Items">
+                <sheet>
+                    <group colspan="4" col="4">
+                        <field name="name"/>
+                        <field name="employee_line_id"/>
+                        <field name="gender"/>
+                        <field name="categ_id"/>
+                        <field name="date"/>
+                        <field name="type_items_id"/>
+                        <field name="color_id"/>
+                        <field name="color_items_id"/>
+                        <field name="size_id"/>
+                        <field name="size_items_id"/>
+                        <field name="qty"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="uinform_employee_linesearch_view" model="ir.ui.view">
+        <field name="name">uinform.employee.line.search.view</field>
+        <field name="model">uinform.employee.line</field>
+        <field name="arch" type="xml">
+            <search string="Uniform">
+                <field name="employee_line_id"/>
+
+                <field name="categ_id"/>
+
+                <field name="type_items_id"/>
+                <field name="product_code"/>
+                <field name="gender"/>
+                <field name="color_items_id"/>
+                <field name="color_id"/>
+                <field name="size_items_id"/>
+                <field name="size_id"/>
+                <separator/>
+
+                <group string="Group By">
+                    <filter
+                            string="Category"
+                            name="groupby_categ_id"
+                            context="{'group_by': 'categ_id'}"/>
+                    <filter
+                            string="Employe Name"
+                            name="groupby_employee_line_id"
+                            context="{'group_by': 'employee_line_id'}"/>
+                    <filter
+                            string="Gender"
+                            name="groupby_gender"
+                            context="{'group_by': 'gender'}"/>
+
+
+
+                    <filter
+                            string="Items"
+                            name="groupby_type_items_id"
+                            context="{'group_by': 'type_items_id'}"/>
+                     <filter
+                            string="product code"
+                            name="groupby_product_code"
+                            context="{'group_by': 'product_code'}"/>
+
+                    <filter
+                            string="Color Details"
+                            name="groupby_color_items_id"
+                            context="{'group_by': 'color_items_id'}"/>
+                    <filter
+                            string="Color"
+                            name="groupby_color_id"
+                            context="{'group_by': 'color_id'}"/>
+
+                    <filter
+                            string="Size Details"
+                            name="groupby_size_items_id"
+                            context="{'group_by': 'size_items_id'}"/>
+                    <filter
+                            string="Size"
+                            name="groupby_size_id"
+                            context="{'group_by': 'size_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="view_uinform_employee_ine_pivot" model="ir.ui.view">
+        <field name="name">view.uinform.employee.ne.pivot"t</field>
+        <field name="model">uinform.employee.line</field>
+        <field name="arch" type="xml">
+            <pivot string="Project Tasks" sample="1">
+                <field name="categ_id" type="row"/>
+
+                <field name="type_items_id" type="col"/>
+                <field name="qty" type="cal"/>
+
+
+                </pivot>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="view_uinform_employee_line_graph">
+            <field name="name">unifor.line.graph</field>
+            <field name="model">uinform.employee.line</field>
+            <field name="arch" type="xml">
+                <graph string="Uniform" sample="1">
+                    <field name="categ_id" type="row"/>
+                    <field name="type_items_id" type="col"/>
+
+
+                </graph>
+            </field>
+    </record>
+
+            <!--  acction  only uinfrom line -->
+    <record id="uinform_employee_line_action" model="ir.actions.act_window">
+        <field name="name">All Uinform </field>
+        <field name="res_model">uinform.employee.line</field>
+        <field name="view_mode">tree,pivot,form,graph</field>
+        <field name="view_id" ref="uinform_employee_line_tree_view"/>
+
+    </record>
+
+
+
+
+
+    <record id="view_employee_form" model="ir.ui.view">
+        <field name="name">hr.employee.form.inherit.hr.fleet</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='category_ids']" position="before">
+                <group>
+
+                 <field name="no_employee" />
+                </group>
+            </xpath>
+
+        </field>
+    </record>
+
+
+    <!--  form technical           -->
+
+    <!-- uinform employeelist view -->
+    <record id="uinform_employee_line_tree_view_technical" model="ir.ui.view">
+        <field name="name">uinform.employee.tree.technical</field>
+        <field name="model">uinform.employee.line.technical</field>
+        <field name="arch" type="xml">
+            <tree >
+                <field name="name"  optional="hide" />
+                <field name="employee_line_id" />
+                <field name="gender"  optional="hide" />
+                <field name="categ_id"/>
+                <field name="date"  optional="hide" />
+                <field name="type_items_id"/>
+
+                <field name="product_code"  optional="hide"/>
+                <field name="color_id"/>
+                <field name="color_items_id"/>
+                <field name="size_id"/>
+                <field name="size_items_id"/>
+                <field name="qty" />
+
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="uinform_employee_line_form_view_technical" model="ir.ui.view">
+        <field name="name">uinform.employee.form.line.view.technical</field>
+        <field name="model">uinform.employee.line.technical</field>
+        <field name="arch" type="xml">
+            <form string="Types Items">
+                <sheet>
+                    <group colspan="4" col="4">
+                        <field name="name"/>
+                        <field name="employee_line_id"/>
+                        <field name="gender"/>
+                        <field name="categ_id"/>
+                        <field name="date"/>
+                        <field name="type_items_id"/>
+                        <field name="color_id"/>
+                        <field name="color_items_id"/>
+                        <field name="size_id"/>
+                        <field name="size_items_id"/>
+                        <field name="qty"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="uinform_employee_line_action_technical" model="ir.actions.act_window">
+        <field name="name">technical (uniform) </field>
+        <field name="res_model">uinform.employee.line.technical</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="uinform_employee_line_tree_view_technical"/>
+
+    </record>
+
+
+
+
+
+
+</odoo>

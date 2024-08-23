@@ -1,0 +1,695 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* masad_uinforms
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e-20220621\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-22 10:32+0000\n"
+"PO-Revision-Date: 2022-12-22 10:32+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: masad_uinforms
+#: model:ir.actions.report,print_report_name:masad_uinforms.action_report_estate_property_unifroms
+#: model:ir.actions.report,print_report_name:masad_uinforms.action_report_uniform_attachment_unifroms
+msgid "'Report for Estate Property - %s' % (object.name)"
+msgstr ""
+
+#. module: masad_uinforms
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.uniform_attachment
+msgid "<b> <strong>:الاجندة </strong></b>"
+msgstr ""
+
+#. module: masad_uinforms
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.uniform_attachment
+msgid "<b> <strong>:التوصيات </strong></b>"
+msgstr ""
+
+#. module: masad_uinforms
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.uinform_employee_line
+msgid "<strong>Category:</strong>"
+msgstr "الفئة"
+
+#. module: masad_uinforms
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.uinform_employee_line
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.uniform_attachment
+msgid "<strong>Date:</strong>"
+msgstr "التاريخ"
+
+#. module: masad_uinforms
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.uniform_attachment
+msgid "<strong>الحضور:</strong>"
+msgstr "الحضور"
+
+#. module: masad_uinforms
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.uniform_attachment
+msgid "<strong>بسم الله الرحمن الرحيم</strong>"
+msgstr "بسم الله الرحمن الرحيم"
+
+#. module: masad_uinforms
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.uniform_attachment
+msgid "<strong>دائرة شئوون الرئاسة</strong>"
+msgstr "دائرة شئوون الرئاسة"
+
+#. module: masad_uinforms
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.uniform_attachment
+msgid "<strong>محضر اجتماع لجنة الزي الموحد 2022</strong>"
+msgstr "محضر اجتماع لجنة الزي الموحد 2022"
+
+#. module: masad_uinforms
+#: model:ir.actions.act_window,name:masad_uinforms.uinform_employee_line_action
+msgid "زي العاملين "
+msgstr ""
+
+#. module: masad_uinforms
+#: model:ir.actions.act_window,name:masad_uinforms.uniform_attachment_action
+msgid "Attachment"
+msgstr "المرفقات"
+
+#. module: masad_uinforms
+#: model:ir.model.fields.selection,name:masad_uinforms.selection__type_items__type_items__belt
+msgid "Belt"
+msgstr ""
+
+#. module: masad_uinforms
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.uniform_attachment_form_view_calendar
+msgid "Calendar View"
+msgstr "التقويم"
+
+#. module: masad_uinforms
+#: model:ir.model.fields,field_description:masad_uinforms.field_uinform_employee__categ_id
+#: model:ir.model.fields,field_description:masad_uinforms.field_uinform_employee_line__categ_id
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.Catgegory_employee_tree_view
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.Typesitems_tree_view
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.color_items_tree_view
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.size_items_tree_view
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.uinform_employee_linesearch_view
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.uinform_employeeesearch_view
+msgid "Category"
+msgstr "فئات الموظفين"
+
+#. module: masad_uinforms
+#: model:ir.actions.act_window,name:masad_uinforms.catgegory_employee_action
+msgid "Catgegor yemployee"
+msgstr "فئات الموظفين"
+
+#. module: masad_uinforms
+#: model:ir.model.fields,field_description:masad_uinforms.field_catgegory_employee__name
+msgid "Catgegory Name"
+msgstr "اسم الفئة"
+
+#. module: masad_uinforms
+#: model:ir.ui.menu,name:masad_uinforms.catgegory_employee_menu
+msgid "Catgegory employee"
+msgstr "فئات الموظفين"
+
+#. module: masad_uinforms
+#: model:ir.model.fields,field_description:masad_uinforms.field_color_items__code
+#: model:ir.model.fields,field_description:masad_uinforms.field_size_items__code
+#: model:ir.model.fields,field_description:masad_uinforms.field_type_items__code
+msgid "Code"
+msgstr "كود"
+
+#. module: masad_uinforms
+#: model:ir.model.fields,field_description:masad_uinforms.field_color_items__color
+#: model:ir.model.fields,field_description:masad_uinforms.field_color_items__name
+#: model:ir.model.fields,field_description:masad_uinforms.field_uinform_employee_line__color_id
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.uinform_employee_linesearch_view
+msgid "Color"
+msgstr "اللون"
+
+#. module: masad_uinforms
+#: model:ir.model.fields,field_description:masad_uinforms.field_uinform_employee_line__color_items_id
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.uinform_employee_linesearch_view
+msgid "Color Details"
+msgstr "تفاصيل اللون"
+
+#. module: masad_uinforms
+#: model:ir.ui.menu,name:masad_uinforms.color_items_menu
+msgid "Color Items"
+msgstr "اللون"
+
+#. module: masad_uinforms
+#: model:ir.model.fields,field_description:masad_uinforms.field_catgegory_employee__create_uid
+#: model:ir.model.fields,field_description:masad_uinforms.field_color_items__create_uid
+#: model:ir.model.fields,field_description:masad_uinforms.field_member_task__create_uid
+#: model:ir.model.fields,field_description:masad_uinforms.field_member_unifrom__create_uid
+#: model:ir.model.fields,field_description:masad_uinforms.field_member_unifrom_line__create_uid
+#: model:ir.model.fields,field_description:masad_uinforms.field_size_items__create_uid
+#: model:ir.model.fields,field_description:masad_uinforms.field_type_items__create_uid
+#: model:ir.model.fields,field_description:masad_uinforms.field_uinform_employee__create_uid
+#: model:ir.model.fields,field_description:masad_uinforms.field_uinform_employee_line__create_uid
+#: model:ir.model.fields,field_description:masad_uinforms.field_uniform_attachment__create_uid
+#: model:ir.model.fields,field_description:masad_uinforms.field_uniform_attachment_line__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: masad_uinforms
+#: model:ir.model.fields,field_description:masad_uinforms.field_catgegory_employee__create_date
+#: model:ir.model.fields,field_description:masad_uinforms.field_color_items__create_date
+#: model:ir.model.fields,field_description:masad_uinforms.field_member_task__create_date
+#: model:ir.model.fields,field_description:masad_uinforms.field_member_unifrom__create_date
+#: model:ir.model.fields,field_description:masad_uinforms.field_member_unifrom_line__create_date
+#: model:ir.model.fields,field_description:masad_uinforms.field_size_items__create_date
+#: model:ir.model.fields,field_description:masad_uinforms.field_type_items__create_date
+#: model:ir.model.fields,field_description:masad_uinforms.field_uinform_employee__create_date
+#: model:ir.model.fields,field_description:masad_uinforms.field_uinform_employee_line__create_date
+#: model:ir.model.fields,field_description:masad_uinforms.field_uniform_attachment__create_date
+#: model:ir.model.fields,field_description:masad_uinforms.field_uniform_attachment_line__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: masad_uinforms
+#: model:ir.model.fields,field_description:masad_uinforms.field_uinform_employee__date
+#: model:ir.model.fields,field_description:masad_uinforms.field_uinform_employee_line__date
+#: model:ir.model.fields,field_description:masad_uinforms.field_uniform_attachment__date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: masad_uinforms
+#: model:ir.model.fields,field_description:masad_uinforms.field_uinform_employee__description
+msgid "Description"
+msgstr "وصف"
+
+#. module: masad_uinforms
+#: model:ir.model.fields,field_description:masad_uinforms.field_catgegory_employee__display_name
+#: model:ir.model.fields,field_description:masad_uinforms.field_color_items__display_name
+#: model:ir.model.fields,field_description:masad_uinforms.field_member_task__display_name
+#: model:ir.model.fields,field_description:masad_uinforms.field_member_unifrom__display_name
+#: model:ir.model.fields,field_description:masad_uinforms.field_member_unifrom_line__display_name
+#: model:ir.model.fields,field_description:masad_uinforms.field_size_items__display_name
+#: model:ir.model.fields,field_description:masad_uinforms.field_type_items__display_name
+#: model:ir.model.fields,field_description:masad_uinforms.field_uinform_employee__display_name
+#: model:ir.model.fields,field_description:masad_uinforms.field_uinform_employee_line__display_name
+#: model:ir.model.fields,field_description:masad_uinforms.field_uniform_attachment__display_name
+#: model:ir.model.fields,field_description:masad_uinforms.field_uniform_attachment_line__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: masad_uinforms
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.uinform_employeeesearch_view
+msgid "Dtae"
+msgstr "التاريخ"
+
+#. module: masad_uinforms
+#: model:ir.model.fields,field_description:masad_uinforms.field_member_unifrom__employee_id
+#: model:ir.model.fields,field_description:masad_uinforms.field_member_unifrom_line__employee_id
+#: model:ir.model.fields,field_description:masad_uinforms.field_uinform_employee__employee_id
+#: model:ir.model.fields,field_description:masad_uinforms.field_uinform_employee_line__employee_line_id
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.uinform_employee_linesearch_view
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.uinform_employeeesearch_view
+msgid "Employe Name"
+msgstr "اسم الموظف"
+
+#. module: masad_uinforms
+#: model:ir.model,name:masad_uinforms.model_hr_employee
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: masad_uinforms
+#: model:ir.model.fields,field_description:masad_uinforms.field_member_unifrom__name
+#: model:ir.model.fields,field_description:masad_uinforms.field_uinform_employee__name
+#: model:ir.model.fields,field_description:masad_uinforms.field_uinform_employee_line__name
+msgid "Employee NO"
+msgstr "رقم الموظف"
+
+#. module: masad_uinforms
+#: model:ir.model.fields,field_description:masad_uinforms.field_uinform_employee__gender
+#: model:ir.model.fields,field_description:masad_uinforms.field_uinform_employee_line__gender
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.uinform_employee_linesearch_view
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.uinform_employeeesearch_view
+msgid "Gender"
+msgstr "الجنس"
+
+#. module: masad_uinforms
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.uinform_employee_linesearch_view
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.uinform_employeeesearch_view
+msgid "Group By"
+msgstr ""
+
+#. module: masad_uinforms
+#: model:ir.module.category,description:masad_uinforms.module_category_uniorm
+msgid "Help you manage uniform."
+msgstr ""
+
+#. module: masad_uinforms
+#: model:ir.model.fields,field_description:masad_uinforms.field_catgegory_employee__id
+#: model:ir.model.fields,field_description:masad_uinforms.field_color_items__id
+#: model:ir.model.fields,field_description:masad_uinforms.field_member_task__id
+#: model:ir.model.fields,field_description:masad_uinforms.field_member_unifrom__id
+#: model:ir.model.fields,field_description:masad_uinforms.field_member_unifrom_line__id
+#: model:ir.model.fields,field_description:masad_uinforms.field_size_items__id
+#: model:ir.model.fields,field_description:masad_uinforms.field_type_items__id
+#: model:ir.model.fields,field_description:masad_uinforms.field_uinform_employee__id
+#: model:ir.model.fields,field_description:masad_uinforms.field_uinform_employee_line__id
+#: model:ir.model.fields,field_description:masad_uinforms.field_uniform_attachment__id
+#: model:ir.model.fields,field_description:masad_uinforms.field_uniform_attachment_line__id
+msgid "ID"
+msgstr ""
+
+#. module: masad_uinforms
+#: model:ir.model.fields,field_description:masad_uinforms.field_type_items__name
+#: model:ir.model.fields,field_description:masad_uinforms.field_uinform_employee_line__type_items_id
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.uinform_employee_linesearch_view
+msgid "Items"
+msgstr "الصنف"
+
+#. module: masad_uinforms
+#: model:ir.model.fields.selection,name:masad_uinforms.selection__type_items__type_items__jecket
+msgid "Jecket"
+msgstr "بدله"
+
+#. module: masad_uinforms
+#: model:ir.model.fields,field_description:masad_uinforms.field_catgegory_employee____last_update
+#: model:ir.model.fields,field_description:masad_uinforms.field_color_items____last_update
+#: model:ir.model.fields,field_description:masad_uinforms.field_member_task____last_update
+#: model:ir.model.fields,field_description:masad_uinforms.field_member_unifrom____last_update
+#: model:ir.model.fields,field_description:masad_uinforms.field_member_unifrom_line____last_update
+#: model:ir.model.fields,field_description:masad_uinforms.field_size_items____last_update
+#: model:ir.model.fields,field_description:masad_uinforms.field_type_items____last_update
+#: model:ir.model.fields,field_description:masad_uinforms.field_uinform_employee____last_update
+#: model:ir.model.fields,field_description:masad_uinforms.field_uinform_employee_line____last_update
+#: model:ir.model.fields,field_description:masad_uinforms.field_uniform_attachment____last_update
+#: model:ir.model.fields,field_description:masad_uinforms.field_uniform_attachment_line____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: masad_uinforms
+#: model:ir.model.fields,field_description:masad_uinforms.field_catgegory_employee__write_uid
+#: model:ir.model.fields,field_description:masad_uinforms.field_color_items__write_uid
+#: model:ir.model.fields,field_description:masad_uinforms.field_member_task__write_uid
+#: model:ir.model.fields,field_description:masad_uinforms.field_member_unifrom__write_uid
+#: model:ir.model.fields,field_description:masad_uinforms.field_member_unifrom_line__write_uid
+#: model:ir.model.fields,field_description:masad_uinforms.field_size_items__write_uid
+#: model:ir.model.fields,field_description:masad_uinforms.field_type_items__write_uid
+#: model:ir.model.fields,field_description:masad_uinforms.field_uinform_employee__write_uid
+#: model:ir.model.fields,field_description:masad_uinforms.field_uinform_employee_line__write_uid
+#: model:ir.model.fields,field_description:masad_uinforms.field_uniform_attachment__write_uid
+#: model:ir.model.fields,field_description:masad_uinforms.field_uniform_attachment_line__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: masad_uinforms
+#: model:ir.model.fields,field_description:masad_uinforms.field_catgegory_employee__write_date
+#: model:ir.model.fields,field_description:masad_uinforms.field_color_items__write_date
+#: model:ir.model.fields,field_description:masad_uinforms.field_member_task__write_date
+#: model:ir.model.fields,field_description:masad_uinforms.field_member_unifrom__write_date
+#: model:ir.model.fields,field_description:masad_uinforms.field_member_unifrom_line__write_date
+#: model:ir.model.fields,field_description:masad_uinforms.field_size_items__write_date
+#: model:ir.model.fields,field_description:masad_uinforms.field_type_items__write_date
+#: model:ir.model.fields,field_description:masad_uinforms.field_uinform_employee__write_date
+#: model:ir.model.fields,field_description:masad_uinforms.field_uinform_employee_line__write_date
+#: model:ir.model.fields,field_description:masad_uinforms.field_uniform_attachment__write_date
+#: model:ir.model.fields,field_description:masad_uinforms.field_uniform_attachment_line__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: masad_uinforms
+#: model:ir.ui.menu,name:masad_uinforms.root_uiforme
+msgid "MASAD Uniform"
+msgstr "زي العاملين"
+
+#. module: masad_uinforms
+#: model:res.groups,name:masad_uinforms.group_uniform_menu
+msgid "Menu Uniform"
+msgstr ""
+
+#. module: masad_uinforms
+#: model:ir.model.fields,field_description:masad_uinforms.field_hr_employee__no_employee
+msgid "NO Employee"
+msgstr ""
+
+#. module: masad_uinforms
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.uinform_employeeesearch_view
+msgid "No Employee"
+msgstr "رقم الموظف"
+
+#. module: masad_uinforms
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.uinform_employee_form_view
+msgid "Other Description"
+msgstr ""
+
+#. module: masad_uinforms
+#: model:ir.model.fields.selection,name:masad_uinforms.selection__type_items__type_items__pod
+msgid "Pod"
+msgstr ""
+
+#. module: masad_uinforms
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.view_uinform_employee_ine_pivot
+msgid "Project Tasks"
+msgstr "المهام"
+
+#. module: masad_uinforms
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.catgegory_employee_form_view
+msgid "Property Tag"
+msgstr ""
+
+#. module: masad_uinforms
+#: model:ir.model.fields,field_description:masad_uinforms.field_uinform_employee_line__qty
+msgid "QTY"
+msgstr "الكمية"
+
+#. module: masad_uinforms
+#: model:ir.actions.report,name:masad_uinforms.action_report_estate_property_unifroms
+msgid "Report Uniforms"
+msgstr "تقرير الزي"
+
+#. module: masad_uinforms
+#: model:ir.model.fields,field_description:masad_uinforms.field_catgegory_employee__code
+msgid "Sequence"
+msgstr "كود"
+
+#. module: masad_uinforms
+#: model:ir.ui.menu,name:masad_uinforms.uiform_configuration
+msgid "Settings"
+msgstr "الاعدادات"
+
+#. module: masad_uinforms
+#: model:ir.model.fields.selection,name:masad_uinforms.selection__type_items__type_items__shoes
+msgid "Shoes"
+msgstr "حذاء"
+
+#. module: masad_uinforms
+#: model:ir.model.fields,field_description:masad_uinforms.field_size_items__name
+#: model:ir.model.fields,field_description:masad_uinforms.field_uinform_employee_line__size_id
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.uinform_employee_linesearch_view
+msgid "Size"
+msgstr "مقاس"
+
+#. module: masad_uinforms
+#: model:ir.model.fields,field_description:masad_uinforms.field_uinform_employee_line__size_items_id
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.uinform_employee_linesearch_view
+msgid "Size Details"
+msgstr "تفااصيل المقاس"
+
+#. module: masad_uinforms
+#: model:ir.ui.menu,name:masad_uinforms.size_items_menu
+msgid "Size Items"
+msgstr ""
+
+#. module: masad_uinforms
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.size_items_form_view
+msgid "Size.items"
+msgstr "المقاسات"
+
+#. module: masad_uinforms
+#: model:ir.model.fields,field_description:masad_uinforms.field_uniform_attachment__start_date
+msgid "Start Date"
+msgstr "بداية التاريخ"
+
+#. module: masad_uinforms
+#: model:ir.model.fields.selection,name:masad_uinforms.selection__type_items__type_items__suit
+msgid "Suit"
+msgstr "بدلة كاملة"
+
+#. module: masad_uinforms
+#: model:ir.model.fields.selection,name:masad_uinforms.selection__type_items__type_items__t_shirt
+msgid "T-shirt"
+msgstr "تيشرت"
+
+#. module: masad_uinforms
+#: model:ir.model,name:masad_uinforms.model_uinform_employee
+#: model:ir.model,name:masad_uinforms.model_uniform_attachment
+msgid "This model is used uinform employee"
+msgstr "زي العاملين"
+
+#. module: masad_uinforms
+#: model:ir.model,name:masad_uinforms.model_uinform_employee_line
+msgid "This model is used uinform employee line"
+msgstr "تقارير الزي"
+
+#. module: masad_uinforms
+#: model:ir.model.fields,field_description:masad_uinforms.field_type_items__type_items
+msgid "Type"
+msgstr "الصتف"
+
+#. module: masad_uinforms
+#: model:ir.ui.menu,name:masad_uinforms.types_items_menu
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.types_items_form_view
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.uinform_employee_line_form_view
+msgid "Types Items"
+msgstr "الاصناف"
+
+#. module: masad_uinforms
+#: model:ir.actions.act_window,name:masad_uinforms.Typesitems_action
+msgid "Types Items(Types)"
+msgstr "الاصناف"
+
+#. module: masad_uinforms
+#: model:res.groups,name:masad_uinforms.group_uniform_read
+msgid "USER (read only)"
+msgstr ""
+
+#. module: masad_uinforms
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.uinform_employee_form_view
+msgid "Uinform"
+msgstr " زي العاملين"
+
+#. module: masad_uinforms
+#: model:ir.actions.act_window,name:masad_uinforms.uinform_employee_action
+msgid "Uinform Employee"
+msgstr "زي العاملين"
+
+#. module: masad_uinforms
+#: model:ir.ui.menu,name:masad_uinforms.uinform_menu
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.uinform_employee_linesearch_view
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.uinform_employeeesearch_view
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.view_uinform_employee_graph
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.view_uinform_employee_line_graph
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.view_uinform_employeeine_pivot
+msgid "Uniform"
+msgstr "قوائم زي العاملين"
+
+#. module: masad_uinforms
+#: model:ir.ui.menu,name:masad_uinforms.uinform_line_data
+msgid "Uniform Details"
+msgstr "تفاصيل زي العاملين"
+
+#. module: masad_uinforms
+#: model:ir.module.category,name:masad_uinforms.module_category_uniorm
+#: model:ir.ui.menu,name:masad_uinforms.uinform_data
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.uinform_employee_form_view
+msgid "Uniform Employee"
+msgstr "زي العاملين"
+
+#. module: masad_uinforms
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.uinform_employee_form_view
+msgid "Uniform Items"
+msgstr ""
+
+#. module: masad_uinforms
+#: model:res.groups,name:masad_uinforms.group_uniform_manager
+msgid "Uniform Manager"
+msgstr ""
+
+#. module: masad_uinforms
+#: model:ir.model.fields,field_description:masad_uinforms.field_uniform_attachment__attachment_line_ids
+#: model:ir.model.fields,field_description:masad_uinforms.field_uniform_attachment_line__attachment_id
+msgid "attachment"
+msgstr "المرفقات"
+
+#. module: masad_uinforms
+#: model:ir.model,name:masad_uinforms.model_member_unifrom
+#: model:ir.model,name:masad_uinforms.model_uniform_attachment_line
+msgid "attachment line"
+msgstr "المرفقات"
+
+#. module: masad_uinforms
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.uinform_employee_line
+msgid "color"
+msgstr "اللون"
+
+#. module: masad_uinforms
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.color_items_form_view
+msgid "color Items"
+msgstr "الالون"
+
+#. module: masad_uinforms
+#: model:ir.model,name:masad_uinforms.model_color_items
+#: model:ir.model,name:masad_uinforms.model_size_items
+msgid "color items"
+msgstr "الالون"
+
+#. module: masad_uinforms
+#: model:ir.actions.act_window,name:masad_uinforms.color_items_action
+msgid "colors Items(s)"
+msgstr ""
+
+#. module: masad_uinforms
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.uinform_employee_line
+msgid "items"
+msgstr ""
+
+#. module: masad_uinforms
+#: model:ir.model,name:masad_uinforms.model_member_unifrom_line
+msgid "member line"
+msgstr "الاعضاء"
+
+#. module: masad_uinforms
+#: model:ir.model,name:masad_uinforms.model_member_task
+msgid "member task"
+msgstr "مهام الاعضاء"
+
+#. module: masad_uinforms
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.uinform_employee_line
+msgid "name"
+msgstr "رقم"
+
+#. module: masad_uinforms
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.uinform_employee_line
+msgid "size"
+msgstr "المقاس"
+
+#. module: masad_uinforms
+#: model:ir.actions.act_window,name:masad_uinforms.size_items_action
+msgid "size.items(size)"
+msgstr "المقاسات"
+
+#. module: masad_uinforms
+#: model:ir.model,name:masad_uinforms.model_catgegory_employee
+msgid "types Catgegory."
+msgstr "فئات الموظفين"
+
+#. module: masad_uinforms
+#: model:ir.model,name:masad_uinforms.model_type_items
+msgid "types items."
+msgstr "الاصناف"
+
+#. module: masad_uinforms
+#: model:ir.model.fields,field_description:masad_uinforms.field_uinform_employee__uiform_line_ids
+msgid "uinform all"
+msgstr ""
+
+#. module: masad_uinforms
+#: model:ir.model.fields,field_description:masad_uinforms.field_uinform_employee_line__uinform_id
+msgid "uinform line"
+msgstr ""
+
+#. module: masad_uinforms
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.umermber_unifom_form_tree
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.umermber_unifom_form_view
+msgid "أعضاء الجنة"
+msgstr ""
+
+#. module: masad_uinforms
+#: model:ir.actions.act_window,name:masad_uinforms.mermber_unifom_action
+msgid "أعضاء اللجنة"
+msgstr ""
+
+#. module: masad_uinforms
+#: model:ir.model.fields,field_description:masad_uinforms.field_uniform_attachment_line__name
+msgid "اسم المرفق"
+msgstr ""
+
+#. module: masad_uinforms
+#: model:ir.model.fields,field_description:masad_uinforms.field_uniform_attachment__description
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.uniform_attachment_form_view
+msgid "الاجندة"
+msgstr ""
+
+#. module: masad_uinforms
+#: model:ir.model.fields,field_description:masad_uinforms.field_member_unifrom__department_id
+#: model:ir.model.fields,field_description:masad_uinforms.field_member_unifrom_line__department_id
+msgid "الادارة"
+msgstr ""
+
+#. module: masad_uinforms
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.uniform_attachment
+msgid "الاسم"
+msgstr ""
+
+#. module: masad_uinforms
+#: model:ir.model.fields,field_description:masad_uinforms.field_member_unifrom_line__member_id2
+#: model:ir.model.fields,field_description:masad_uinforms.field_uniform_attachment__empo_attachment_line_ids2
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.uniform_attachment_form_view
+msgid "الاعتذار"
+msgstr ""
+
+#. module: masad_uinforms
+#: model:ir.ui.menu,name:masad_uinforms.mermber_unifom_action_id_uniforom
+msgid "الاعضاء"
+msgstr ""
+
+#. module: masad_uinforms
+#: model:ir.model.fields,field_description:masad_uinforms.field_member_task__name
+#: model:ir.model.fields,field_description:masad_uinforms.field_member_task__task_id
+#: model:ir.model.fields,field_description:masad_uinforms.field_uniform_attachment__task_ids
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.uniform_attachment_form_view
+msgid "التكاليف"
+msgstr ""
+
+#. module: masad_uinforms
+#: model:ir.model.fields,field_description:masad_uinforms.field_uniform_attachment__description2
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.uniform_attachment_form_view
+msgid "التوصيات"
+msgstr ""
+
+#. module: masad_uinforms
+#: model:ir.model.fields,field_description:masad_uinforms.field_member_unifrom_line__member_id
+#: model:ir.model.fields,field_description:masad_uinforms.field_uniform_attachment__empo_attachment_line_ids
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.uniform_attachment_form_view
+msgid "الحضور"
+msgstr ""
+
+#. module: masad_uinforms
+#: model:ir.model.fields,field_description:masad_uinforms.field_member_unifrom__job_member
+#: model:ir.model.fields,field_description:masad_uinforms.field_member_unifrom_line__job_member
+msgid "الصفة"
+msgstr ""
+
+#. module: masad_uinforms
+#: model:ir.model.fields,field_description:masad_uinforms.field_member_task__period_task
+msgid "الفترة"
+msgstr ""
+
+#. module: masad_uinforms
+#: model:ir.ui.menu,name:masad_uinforms.attachment_id_uniforom
+msgid "المحاضر والمرفقات"
+msgstr ""
+
+#. module: masad_uinforms
+#: model:ir.model.fields,field_description:masad_uinforms.field_uniform_attachment_line__batchfile
+msgid "المرفق"
+msgstr ""
+
+#. module: masad_uinforms
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.uniform_attachment_form_view
+msgid "المرفقات"
+msgstr ""
+
+#. module: masad_uinforms
+#: model:ir.model.fields,field_description:masad_uinforms.field_member_task__member_task
+msgid "المكلف"
+msgstr ""
+
+#. module: masad_uinforms
+#: model:ir.model.fields,field_description:masad_uinforms.field_uniform_attachment__name
+msgid "رقم الاجتماع"
+msgstr ""
+
+#. module: masad_uinforms
+#: model:ir.actions.report,name:masad_uinforms.action_report_uniform_attachment_unifroms
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.uniform_attachment_form_view
+msgid "محضر الاجتماع"
+msgstr ""
+
+#. module: masad_uinforms
+#: model_terms:ir.ui.view,arch_db:masad_uinforms.uniform_attachment_form_view
+msgid "مرفق"
+msgstr ""
+
+#. module: masad_uinforms
+#: model:ir.model.fields,field_description:masad_uinforms.field_uniform_attachment__location
+msgid "مكان الاجتماع"
+msgstr ""
+
+#. module: masad_uinforms
+#: model:ir.model.fields,field_description:masad_uinforms.field_member_task__mark_task
+msgid "ملاحظات"
+msgstr ""

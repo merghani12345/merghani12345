@@ -1,0 +1,180 @@
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="masad_filter1_actionA">
+            <field name="name">طلبات بالجنبة السوداني</field>
+            <field name="res_model">masad.association</field>
+            <field name="view_mode">tree</field>
+            <field name="domain">[('currency_id', '=', 'SDG')]</field>
+            <field name="view_id" ref="masad_view_tree"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">رئاسة منظومة الصناعات الدفاعية</p>
+                <p>نظام سجل طلبات الدعم المجتمعي</p>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="masad_filter2_actionB">
+            <field name="name">طلبات بالجنية المصري</field>
+            <field name="res_model">masad.association</field>
+            <field name="view_mode">tree</field>
+            <field name="domain">[('currency_id', '=', 'EGP')]</field>
+            <field name="view_id" ref="masad_view_tree"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">رئاسة منظومة الصناعات الدفاعية</p>
+                <p>نظام سجل طلبات الدعم المجتمعي</p>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="masad_filter3_actionC">
+            <field name="name">طلبات بالدولار الأمريكي</field>
+            <field name="res_model">masad.association</field>
+            <field name="view_mode">tree</field>
+            <field name="domain">[('currency_id', '=', 'USD')]</field>
+            <field name="view_id" ref="masad_view_tree"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">رئاسة منظومة الصناعات الدفاعية</p>
+                <p>نظام سجل طلبات الدعم المجتمعي</p>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="masad_filter4_actionD">
+            <field name="name">طلبات الريال السعودي</field>
+            <field name="res_model">masad.association</field>
+            <field name="view_mode">tree</field>
+            <field name="domain">[('currency_id', '=', 'SAR')]</field>
+            <field name="view_id" ref="masad_view_tree"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">رئاسة منظومة الصناعات الدفاعية</p>
+                <p>نظام سجل طلبات الدعم المجتمعي</p>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="masad_filter5_actionF">
+            <field name="name">طلبات باليورو</field>
+            <field name="res_model">masad.association</field>
+            <field name="view_mode">tree</field>
+            <field name="domain">[('currency_id', '=', 'EUR')]</field>
+            <field name="view_id" ref="masad_view_tree"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">رئاسة منظومة الصناعات الدفاعية</p>
+                <p>نظام سجل طلبات الدعم المجتمعي</p>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="masad_filter6_actionG">
+            <field name="name">طلبات بالدرهم الاماراتي</field>
+            <field name="res_model">masad.association</field>
+            <field name="view_mode">tree</field>
+            <field name="domain">[('currency_id', '=', 'AED')]</field>
+            <field name="view_id" ref="masad_view_tree"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">رئاسة منظومة الصناعات الدفاعية</p>
+                <p>نظام سجل طلبات الدعم المجتمعي</p>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="masad_filter1_action">
+            <field name="name">طلبات تم تصديقها</field>
+            <field name="res_model">masad.association</field>
+            <field name="view_mode">tree</field>
+            <field name="domain">[('state', '=', 'done')]</field>
+            <field name="view_id" ref="masad_view_tree"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">رئاسة منظومة الصناعات الدفاعية</p>
+                <p>نظام سجل طلبات الدعم المجتمعي</p>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="masad_filter2_action">
+            <field name="name">طلبات قيد المراجعة</field>
+            <field name="res_model">masad.association</field>
+            <field name="view_mode">tree</field>
+            <field name="domain">[('state', '=', 'to approve')]</field>
+            <field name="view_id" ref="masad_view_tree"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">رئاسة منظومة الصناعات الدفاعية</p>
+                <p>نظام سجل طلبات الدعم المجتمعي</p>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="masad_filter3_action">
+            <field name="name">طلبات تم قبولها</field>
+            <field name="res_model">masad.association</field>
+            <field name="view_mode">tree</field>
+            <field name="domain">[('state', '=', 'confirm')]</field>
+            <field name="view_id" ref="masad_view_tree"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">رئاسة منظومة الصناعات الدفاعية</p>
+                <p>نظام سجل طلبات الدعم المجتمعي</p>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="masad_filter4_action">
+            <field name="name">طلبات مسودة</field>
+            <field name="res_model">masad.association</field>
+            <field name="view_mode">tree</field>
+            <field name="domain">[('state', '=', 'draft')]</field>
+            <field name="view_id" ref="masad_view_tree"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">رئاسة منظومة الصناعات الدفاعية</p>
+                <p>نظام سجل طلبات الدعم المجتمعي</p>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="masad_filter5_action">
+            <field name="name">طلبات تم رفضها</field>
+            <field name="res_model">masad.association</field>
+            <field name="view_mode">tree</field>
+            <field name="domain">[('state', '=', 'cancel')]</field>
+            <field name="view_id" ref="masad_view_tree"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">رئاسة منظومة الصناعات الدفاعية</p>
+                <p>نظام سجل طلبات الدعم المجتمعي</p>
+            </field>
+        </record>
+
+
+        <menuitem name="الفلاتر" id="masad_association.menu_filter" parent="masad_association.menu_root"
+                  groups="masad_association.group_filter" sequence="3"/>
+
+
+        <menuitem name="فلتر حسب حالة الطلب" id="masad_association.menu_filterA" parent="masad_association.menu_filter"/>
+
+        <menuitem name="طلبات تم تصديقها" id="masad_association.menu_filter1" parent="masad_association.menu_filterA"
+                  action="masad_filter1_action"/>
+
+        <menuitem name="طلبات قيد المراجعة" id="masad_association.menu_filter2" parent="masad_association.menu_filterA"
+                  action="masad_filter2_action"/>
+
+        <menuitem name="طلبات تم قبولها" id="masad_association.menu_filter3" parent="masad_association.menu_filterA"
+                  action="masad_filter3_action"/>
+
+        <menuitem name="طلبات مسودة" id="masad_association.menu_filter4" parent="masad_association.menu_filterA"
+                  action="masad_filter4_action"/>
+
+        <menuitem name="طلبات تم رفضها" id="masad_association.menu_filter5" parent="masad_association.menu_filterA"
+                  action="masad_filter5_action"/>
+
+
+        <menuitem name="فلتر حسب العملة" id="masad_association.menu_filterB" parent="masad_association.menu_filter"/>
+
+        <menuitem name="الجنية السوداني" id="masad_association.menu_filterB1" parent="masad_association.menu_filterB"
+                  action="masad_filter1_actionA"/>
+
+        <menuitem name="الجنية المصري" id="masad_association.menu_filterB2" parent="masad_association.menu_filterB"
+                  action="masad_filter2_actionB"/>
+
+        <menuitem name="الدولار الأمريكي" id="masad_association.menu_filterB3" parent="masad_association.menu_filterB"
+                  action="masad_filter3_actionC"/>
+
+        <menuitem name="الريال السعودي" id="masad_association.menu_filterB4" parent="masad_association.menu_filterB"
+                  action="masad_filter4_actionD"/>
+
+        <menuitem name="اليورو" id="masad_association.menu_filterB5" parent="masad_association.menu_filterB"
+                  action="masad_filter5_actionF"/>
+
+        <menuitem name="الدرهم الاماراتي" id="masad_association.menu_filterB6" parent="masad_association.menu_filterB"
+                  action="masad_filter6_actionG"/>
+
+
+    </data>
+</odoo>

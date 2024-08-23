@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+    <template id="areport_assocition44">
+        <t t-call="web.html_container">
+            <t t-call="web.basic_layout">
+                <div class="page">
+                    <table class="table table-bordered" style="table-layout: fixed">
+                        <thead>
+                            <tr><img class="img" src="/masad_association/static/src/img/formheader.png" /></tr>
+                            <center>
+                                        <h3>
+                                            الــطــلــبــات حــســب حــالــة الـدعـم
+                                        </h3>
+                            </center>
+                            <tr align="right">
+                                    <h4>
+                                            تاريخ التقرير :
+                                        <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d')"/>
+                                    </h4>
+                            </tr>
+
+
+                            <tr>
+                                <th>الاهمية</th>
+                                <th>نوع الدعم</th>
+                                <th>تصنيف الدعم</th>
+                                <th>العملة</th>
+                                <th>المبلغ</th>
+                                <th>تاريخ الدعم</th>
+                                <th>حالة الدعم</th>
+                                <th>رقم الدعم</th>
+                                <th>*</th>
+
+                            </tr>
+                        </thead>
+                        <t t-foreach="docs" t-as="o">
+
+                            <tr align="right">
+
+                                <td>
+                                    <span t-field="o.priority"/>
+                                </td>
+
+                                <td>
+                                    <span t-field="o.support_tybe"/>
+
+                                </td>
+                                <td>
+                                    <span t-field="o.categ_id"/>
+                                </td>
+                                 <td>
+                                    <span t-field="o.currency_id"/>
+                                </td>
+                                <td>
+                                    <span t-field="o.price"/>
+                                </td>
+                                <td>
+                                    <span t-field="o.request_date" t-options='{"format": "MM/dd/yyyy"}'/>
+
+                                </td>
+                                <td>
+                                    <span t-field="o.state"/>
+
+                                </td>
+
+                                 <td>
+                                    <span t-field="o.ref"/>
+
+                                </td>
+
+                                 <td>
+                                    <span t-esc="o_index + 1"/>
+                                </td>
+                            </tr>
+
+                        </t>
+
+
+                    </table>
+
+                    <h5 style="background-color:LightGray;" align="right">
+                        الـمــجـــمــــوع :
+                        <span t-esc="sum(line.price for line in docs)"/>
+
+                    </h5>
+                </div>
+     <div align="right">
+                     <pre>
+                        <h5>
+                                             اعتماد وتوصية رئيس اللجنة:                            التوقيع:
+                              <br/>
+                                             تصديق وتوصية المدير العام:                            التوقيع:
+                        </h5>
+                    </pre>
+                </div>
+
+            </t>
+        </t>
+
+    </template>
+
+</odoo>

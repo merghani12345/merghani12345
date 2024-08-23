@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="areport_assocition100">
+        <t t-call="web.html_container">
+            <t t-call="web.basic_layout">
+                <div class="page">
+                    <table  class="table table-bordered" style="table-layout: fixed; ">
+                        <thead style="background-color:LightGray;">
+                            <tr>
+                                <td>
+                                    <img class="img" src="/masad_association/static/src/img/header.jpg"/>
+                                </td>
+                            </tr>
+                        <th style="background-color:LightGray;">
+                           رقم الطلب
+                        </th>
+                        <th>
+                            الإسم
+                        </th>
+                        <th>
+                            العنوان
+                        </th>
+                         <th>
+                            الرقم التعريفي
+                        </th>
+                            <th>العملة</th>
+                            <th>
+                                 المبلغ
+                            </th>
+
+                        </thead>
+                        <t t-foreach="docs" t-as="o">
+                            <tr>
+                                 <td>
+                                        <span t-field="o.ref"/>
+                                </td>
+                                <td>
+                                        <span t-field="o.name"/>
+                                </td>
+
+
+                                <td>
+                                        <span t-field="o.state"/>
+                                </td>
+                                  <td>
+                                        <span t-field="o.id_num"/>
+                                </td>
+                                 <td>
+                                    <span t-field="o.currency_id"/>
+                                </td>
+                                   <td>
+                                    <span t-field="o.price"/>
+                                </td>
+
+                            </tr>
+                        </t>
+                    </table>
+                     <h5 style="background-color:LightGray;" align="right">
+                        الـمــجـــمــــوع :
+                        <span t-esc="sum(line.price for line in docs)"/>
+
+                    </h5>
+                       <div align="right" >
+                    <pre>
+                        <h5>
+                         :   اعتماد وتوصية رئيس اللجنة:                            التوقيع
+                            <br/>
+                          :  تصديق وتوصية المدير العام:                            التوقيع
+                        </h5>
+                    </pre>
+                </div>
+                </div>
+
+
+            </t>
+        </t>
+
+    </template>
+
+</odoo>

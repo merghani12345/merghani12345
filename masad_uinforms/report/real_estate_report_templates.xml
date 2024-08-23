@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="uinform_employee_line">
+        <t t-foreach="docs" t-as="property">
+            <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2>
+                            <span t-field="property.date"/>
+                        </h2>
+                        <div>
+                            <strong>Category:</strong>
+                            <span t-field="property.categ_id"/>
+                            <strong>Date:</strong>
+                            <span t-field="property.date"/>
+                        </div>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>name</th>
+                                    <th>items</th>
+                                    <th>size</th>
+                                    <th>color</th>
+                                    <th>color</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr t-foreach="property" t-as="emp">
+                                    <td>
+                                        <span t-field="emp.employee_id"/>
+                                    </td>
+
+                                <tr t-foreach="property.uiform_line_ids" t-as="offer">
+
+                                    <td>
+                                        <span t-field="offer.type_items_id"/>
+                                    </td>
+                                    <td>
+                                        <span t-field="offer.size_items_id"/>
+                                    </td>
+                                    <td>
+                                        <span t-field="offer.color_items_id"/>
+                                    </td>
+                                    <td>
+                                        <span t-field="offer.qty"/>
+                                    </td>
+                                </tr>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+<!--      تقرير المحضر    -->
+    <template id="uniform_attachment">
+        <t t-foreach="docs" t-as="property">
+            <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <div>
+
+                           <center>
+                           <strong>بسم الله الرحمن الرحيم</strong>
+                             </center>
+
+                            <center>
+                             <h1>  <strong>دائرة شئوون الرئاسة</strong></h1>
+                             </center>
+                            <pr>
+                            <center>
+                            <h2> <strong>محضر اجتماع لجنة الزي الموحد 2022</strong></h2>
+                            </center>
+                            </pr>
+
+
+
+
+
+                        </div>
+                                               <pre>
+                                                          </pre>
+
+
+                            <span t-field="property.name"/>
+
+                            <strong>Date:</strong>
+                            <span t-field="property.date"/>
+                        <pre>
+                           <strong>الحضور:</strong>
+                        </pre>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>الاسم</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                 <tr t-foreach="property.empo_attachment_line_ids" t-as="offer">
+                                    <td>
+                                        <span t-field="offer.employee_id"/>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+
+                        <div>
+
+                           <b> <strong>:الاجندة </strong></b>
+                            <pre>
+                            <span t-field="property.description"/>
+                               </pre>
+                        </div>
+
+                        <div>
+
+                           <b> <strong>:التوصيات </strong></b>
+                            <pre>
+                            <span t-field="property.description2"/>
+                               </pre>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>
